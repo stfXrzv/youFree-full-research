@@ -1,0 +1,46 @@
+# Secrets and authentication
+.env
+.env.*
+!.env.example
+*.cookie
+*.cookies
+*cookies*.txt
+*cookies*.json
+.yt_cookie.txt
+.yt_oauth.json
+oauth_config.json
+client_secret*.json
+secrets/
+private/
+
+# Private or volatile resolver data
+traces/
+raw-logs/
+*.har
+*.pcap
+*.sqlite
+*.sqlite3
+*.db
+*.log
+artifacts/private/
+
+# Generated dependencies and build output
+node_modules/
+vendor/
+dist/
+build/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
