@@ -1,0 +1,4 @@
+{"id":"D-0001","date":"2026-07-15","status":"accepted","decision":"Treat URL resolution and readable media-byte acquisition as independent gates.","source":"common-plan-v1"}
+{"id":"D-0002","date":"2026-07-15","status":"accepted","decision":"Test JavaScript Worker transport before building a Pyodide mini-wheel.","source":"common-plan-v1"}
+{"id":"D-0003","date":"2026-07-15","status":"accepted","decision":"Never commit cookies, OAuth data, secrets, signed media URLs, or private raw traces.","source":"repository-bootstrap"}
+
