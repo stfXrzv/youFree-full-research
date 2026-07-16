@@ -1,0 +1,352 @@
+{
+  "startedAt": "2026-07-16T18:20:08.106Z",
+  "target": "http://localhost/aaa/vibestream-browser-resolver/transfer-lab/",
+  "inputUrl": "https://www.youtube.com/watch?v=A9-t86OAtM0",
+  "requirements": {
+    "maxMediaBytes": 104857600,
+    "noExtension": true,
+    "noMediaRelay": true
+  },
+  "console": [
+    "[VBS-V7] service-worker-ready {ok: true, strictOffline: false, cache: vibestream-query-range-v7-media}",
+    "[VBS-V7] resolve-start {videoId: A9-t86OAtM0}",
+    "[VBS-V7] resolver-client {client: IOS, status: 200, playability: OK, formats: 21, reason: }",
+    "[VBS-V7] resolver-client {client: ANDROID, status: 200, playability: OK, formats: 1, reason: }",
+    "[VBS-V7] resolve-complete {video: Object, audio: Object, progressive: Object, adaptiveBytes: 39274703, progressiveBytes: 11461305}",
+    "[VBS-V7] service-worker {type: vbs-media-request, itag: 18, rangeQuery: 0-, rangeHeader: bytes=0-, destination: video}",
+    "[VBS-V7] online-playback-result {ok: true, quality: 360p, videoItag: 18, audioItag: 18, videoReadyState: 4}",
+    "[VBS-V7] cache-fetch-start {kind: progressive, itag: 18, expectedBytes: 11461305, estimated: true, rangeInQuery: true}",
+    "[VBS-V7] service-worker {type: vbs-media-request, itag: 18, rangeQuery: 0-, rangeHeader: , destination: }",
+    "[VBS-V7] cache-fetch-complete {kind: progressive, itag: 18, expectedBytes: 11461305, estimated: true, elapsedMs: 845}",
+    "[VBS-V7] cache-complete {expectedBytes: 11461305, usageDelta: 12781604, manifestStoredIn: IndexedDB, mediaStoredIn: Cache Storage}",
+    "[VBS-V7] strict-offline-enabled {enabled: true}",
+    "[VBS-V7] cache-playback-result {ok: true, cacheHits: 0, cacheVerified: true, blockedMiss: false, videoReadyState: 4}",
+    "[VBS-V7] native-download-start {directToBrowser: true, urlHost: rr2---sn-8pgbpohxqp5-aiges.googlevideo.com}"
+  ],
+  "requests": [
+    {
+      "at": 1784226008783,
+      "resourceType": "document",
+      "rangeHeader": "",
+      "host": "localhost",
+      "path": "/aaa/vibestream-browser-resolver/transfer-lab/",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226009950,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226010794,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226011230,
+      "resourceType": "media",
+      "rangeHeader": "bytes=0-",
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226013180,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226015624,
+      "resourceType": "document",
+      "rangeHeader": "",
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": true
+    }
+  ],
+  "responses": [
+    {
+      "at": 1784226010764,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226011150,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226011309,
+      "status": 206,
+      "fromServiceWorker": true,
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226013224,
+      "status": 200,
+      "fromServiceWorker": true,
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784226015681,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": true
+    }
+  ],
+  "checks": {
+    "boot": {
+      "pass": true,
+      "title": "VibeStream Browser Transfer Lab"
+    },
+    "resolveUnder100Mb": {
+      "pass": true,
+      "bytes": 39274703
+    },
+    "onlineDirectPlayback": {
+      "pass": true,
+      "phase": "online-playback-pass",
+      "detectedHeight": 1080,
+      "playableHeight": 360,
+      "mediaHosts": [
+        "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com"
+      ],
+      "responses": [
+        {
+          "at": 1784226011309,
+          "status": 206,
+          "fromServiceWorker": true,
+          "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+          "path": "/videoplayback",
+          "itag": "18",
+          "range": "0-",
+          "hasTitle": false
+        }
+      ],
+      "result": {
+        "at": "2026-07-16T18:20:13.070Z",
+        "type": "online-playback-result",
+        "ok": true,
+        "quality": "360p",
+        "videoItag": 18,
+        "audioItag": 18,
+        "videoReadyState": 4,
+        "videoCurrentTime": 1.180303,
+        "audioReadyState": null,
+        "audioCurrentTime": null,
+        "drift": 0,
+        "playResults": [
+          "fulfilled"
+        ]
+      }
+    },
+    "directGooglevideoTransfer": {
+      "pass": true,
+      "mediaResponses": [
+        {
+          "at": 1784226013224,
+          "status": 200,
+          "fromServiceWorker": true,
+          "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+          "path": "/videoplayback",
+          "itag": "18",
+          "range": "0-",
+          "hasTitle": false
+        }
+      ]
+    },
+    "opaqueCache": {
+      "pass": true,
+      "entries": 1
+    },
+    "noMediaRelay": {
+      "pass": true,
+      "observedMediaHosts": [
+        "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com"
+      ]
+    },
+    "offlinePlayback": {
+      "pass": true,
+      "phase": "cache-playback-pass",
+      "newNetworkRequests": 0,
+      "serviceWorkerResponses": []
+    },
+    "nativeMp4": {
+      "pass": true,
+      "directBrowserDownload": true,
+      "bytes": 11454973
+    }
+  },
+  "resolve": {
+    "phase": "resolved",
+    "lastError": "",
+    "attempts": [
+      {
+        "client": "IOS",
+        "status": 200,
+        "playability": "OK",
+        "formats": 21,
+        "reason": ""
+      },
+      {
+        "client": "ANDROID",
+        "status": 200,
+        "playability": "OK",
+        "formats": 1,
+        "reason": ""
+      }
+    ],
+    "title": "Just Lose It (Director's Cut) by Eminem | Eminem",
+    "video": {
+      "itag": 399,
+      "client": "IOS",
+      "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+      "height": 1080,
+      "contentLength": 35275232,
+      "estimatedContentLength": 35275232
+    },
+    "audio": {
+      "itag": 251,
+      "client": "IOS",
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "height": 0,
+      "contentLength": 3999471,
+      "estimatedContentLength": 3999471
+    },
+    "progressive": {
+      "itag": 18,
+      "client": "ANDROID",
+      "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+      "height": 360,
+      "contentLength": 0,
+      "estimatedContentLength": 11461305
+    }
+  },
+  "onlineStream": {
+    "phase": "online-playback-pass",
+    "lastError": "",
+    "result": {
+      "at": "2026-07-16T18:20:13.070Z",
+      "type": "online-playback-result",
+      "ok": true,
+      "quality": "360p",
+      "videoItag": 18,
+      "audioItag": 18,
+      "videoReadyState": 4,
+      "videoCurrentTime": 1.180303,
+      "audioReadyState": null,
+      "audioCurrentTime": null,
+      "drift": 0,
+      "playResults": [
+        "fulfilled"
+      ]
+    }
+  },
+  "cache": {
+    "phase": "cached",
+    "lastError": "",
+    "manifest": {
+      "videoId": "A9-t86OAtM0",
+      "expectedBytes": 11461305,
+      "video": {
+        "itag": 18,
+        "observed": {
+          "type": "opaque",
+          "status": 0,
+          "bodyVisible": false
+        }
+      },
+      "audio": null,
+      "storageBefore": {
+        "usage": 8922,
+        "quota": 10737427162
+      },
+      "storageAfter": {
+        "usage": 12790526,
+        "quota": 10750208766
+      }
+    },
+    "cacheKeys": [
+      {
+        "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+        "itag": "18",
+        "range": "0-"
+      }
+    ]
+  },
+  "playback": {
+    "phase": "cache-playback-pass",
+    "lastError": "",
+    "video": {
+      "readyState": 4,
+      "networkState": 1,
+      "duration": 245.5278,
+      "currentTime": 1.19219,
+      "error": null
+    },
+    "audio": {
+      "readyState": 0,
+      "currentTime": 0,
+      "error": null
+    },
+    "serviceWorkerEvents": []
+  },
+  "nativeDownload": {
+    "available": true,
+    "href": {
+      "host": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": true
+    },
+    "suggestedFilename": "Just Lose It (Director's Cut) by Eminem Eminem.mp4",
+    "bytes": 11454973,
+    "first32Hex": "00000018667479706d7034320000000069736f6d6d70343200015dae6d6f6f76"
+  },
+  "finishedAt": "2026-07-16T18:20:16.520Z",
+  "pass": true
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "vibestream-gate-c-v1",
+  "recordedAt": "2026-07-16T18:34:36.975Z",
+  "target": "http://localhost/aaa/vibestream-browser-resolver/lab/",
+  "videoId": "A9-t86OAtM0",
+  "resolver": "browser-player-api",
+  "mediaRelayUsed": false,
+  "initial": {
+    "title": "Just Lose It (Director's Cut) by Eminem | Eminem",
+    "playability": "OK",
+    "formatCount": 21,
+    "video": {
+      "itag": 399,
+      "height": 1080,
+      "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+      "probe": {
+        "ok": true,
+        "status": 206,
+        "type": "video/mp4",
+        "range": "bytes 0-0/35275232"
+      }
+    },
+    "audio": {
+      "itag": 251,
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "probe": {
+        "ok": true,
+        "status": 206,
+        "type": "audio/webm",
+        "range": "bytes 0-0/3999471"
+      }
+    }
+  },
+  "nativeAdaptivePlayback": {
+    "ok": false,
+    "reason": "media_error",
+    "code": 4
+  },
+  "recovery": {
+    "ok": true,
+    "resolveCalls": 2,
+    "attempts": [
+      {
+        "attempt": 1,
+        "summary": {
+          "videoItag": 399,
+          "videoHeight": 1080,
+          "audioItag": 251,
+          "expiresAt": 1
+        },
+        "validation": {
+          "ok": false,
+          "videoStatus": 403,
+          "audioStatus": 206
+        }
+      },
+      {
+        "attempt": 2,
+        "summary": {
+          "videoItag": 399,
+          "videoHeight": 1080,
+          "audioItag": 251,
+          "expiresAt": 1784248476
+        },
+        "validation": {
+          "ok": true,
+          "videoStatus": 206,
+          "audioStatus": 206
+        }
+      }
+    ]
+  },
+  "gateC": {
+    "pass": true,
+    "adaptiveNativePlayback": false,
+    "reason": "Resolver and automatic recovery pass; native adaptive playback remains blocked by Googlevideo open-range behavior."
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "startedAt": "2026-07-14T17:19:57.575Z",
+  "target": "http://localhost/aaa/ytdwl/_cache_lab/query-range-v7/",
+  "inputUrl": "https://www.youtube.com/watch?v=nZvY6EaKfh8",
+  "requirements": {
+    "maxMediaBytes": 104857600,
+    "noExtension": true,
+    "noMediaRelay": true
+  },
+  "console": [
+    "[VBS-V7] service-worker-ready {ok: true, strictOffline: false, cache: vibestream-query-range-v7-media}",
+    "[VBS-V7] resolve-start {videoId: nZvY6EaKfh8}",
+    "[VBS-V7] resolver-client {client: IOS, status: 200, playability: OK, formats: 27, reason: }",
+    "[VBS-V7] resolver-client {client: ANDROID, status: 200, playability: OK, formats: 1, reason: }",
+    "[VBS-V7] resolve-complete {video: Object, audio: Object, progressive: Object, adaptiveBytes: 43176111, progressiveBytes: 0}",
+    "[VBS-V7] service-worker {type: vbs-media-request, itag: 18, rangeQuery: 0-, rangeHeader: bytes=0-, destination: video}",
+    "[VBS-V7] online-playback-result {ok: true, quality: 360p, videoItag: 18, audioItag: 18, videoReadyState: 4}",
+    "[VBS-V7] cache-fetch-start {kind: progressive, itag: 18, expectedBytes: 0, rangeInQuery: true, rangeHeader: false}",
+    "[VBS-V7] service-worker {type: vbs-media-request, itag: 18, rangeQuery: 0-, rangeHeader: , destination: }",
+    "[VBS-V7] cache-fetch-complete {kind: progressive, itag: 18, expectedBytes: 0, elapsedMs: 1404, observed: Object}",
+    "[VBS-V7] cache-complete {expectedBytes: 0, usageDelta: 20891912, manifestStoredIn: IndexedDB, mediaStoredIn: Cache Storage}",
+    "[VBS-V7] strict-offline-enabled {enabled: true}",
+    "[VBS-V7] cache-playback-result {ok: true, cacheHits: 0, cacheVerified: true, blockedMiss: false, videoReadyState: 4}",
+    "[VBS-V7] native-download-start {directToBrowser: true, urlHost: rr6---sn-8pgbpohxqp5-aigez.googlevideo.com}"
+  ],
+  "requests": [
+    {
+      "at": 1784049598187,
+      "resourceType": "document",
+      "rangeHeader": "",
+      "host": "localhost",
+      "path": "/aaa/ytdwl/_cache_lab/query-range-v7/",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049599511,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049599910,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049600292,
+      "resourceType": "media",
+      "rangeHeader": "bytes=0-",
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049602381,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049605392,
+      "resourceType": "document",
+      "rangeHeader": "",
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": true
+    }
+  ],
+  "responses": [
+    {
+      "at": 1784049599901,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049600212,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049600362,
+      "status": 206,
+      "fromServiceWorker": true,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049602425,
+      "status": 200,
+      "fromServiceWorker": true,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784049605451,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": true
+    }
+  ],
+  "checks": {
+    "boot": {
+      "pass": true,
+      "title": "VibeStream Browser Transfer Lab"
+    },
+    "resolveUnder100Mb": {
+      "pass": true,
+      "bytes": 43176111
+    },
+    "onlineDirectPlayback": {
+      "pass": true,
+      "phase": "online-playback-pass",
+      "detectedHeight": 1012,
+      "playableHeight": 338,
+      "mediaHosts": [
+        "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com"
+      ],
+      "responses": [
+        {
+          "at": 1784049600362,
+          "status": 206,
+          "fromServiceWorker": true,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "path": "/videoplayback",
+          "itag": "18",
+          "range": "0-",
+          "hasTitle": false
+        }
+      ],
+      "result": {
+        "at": "2026-07-14T17:20:02.287Z",
+        "type": "online-playback-result",
+        "ok": true,
+        "quality": "360p",
+        "videoItag": 18,
+        "audioItag": 18,
+        "videoReadyState": 4,
+        "videoCurrentTime": 1.168929,
+        "audioReadyState": null,
+        "audioCurrentTime": null,
+        "drift": 0,
+        "playResults": [
+          "fulfilled"
+        ]
+      }
+    },
+    "directGooglevideoTransfer": {
+      "pass": true,
+      "mediaResponses": [
+        {
+          "at": 1784049602425,
+          "status": 200,
+          "fromServiceWorker": true,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "path": "/videoplayback",
+          "itag": "18",
+          "range": "0-",
+          "hasTitle": false
+        }
+      ]
+    },
+    "opaqueCache": {
+      "pass": true,
+      "entries": 1
+    },
+    "noMediaRelay": {
+      "pass": true,
+      "observedMediaHosts": [
+        "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com"
+      ]
+    },
+    "offlinePlayback": {
+      "pass": true,
+      "phase": "cache-playback-pass",
+      "newNetworkRequests": 0,
+      "serviceWorkerResponses": []
+    },
+    "nativeMp4": {
+      "pass": true,
+      "directBrowserDownload": true,
+      "bytes": 14927857
+    }
+  },
+  "resolve": {
+    "phase": "resolved",
+    "lastError": "",
+    "attempts": [
+      {
+        "client": "IOS",
+        "status": 200,
+        "playability": "OK",
+        "formats": 27,
+        "reason": ""
+      },
+      {
+        "client": "ANDROID",
+        "status": 200,
+        "playability": "OK",
+        "formats": 1,
+        "reason": ""
+      }
+    ],
+    "title": "Ceeka RSA & Tyler ICU - Jealousy (Australia Tour, Lyric Video) ft. Leemckrazy & Khalil Harrison",
+    "video": {
+      "itag": 399,
+      "client": "IOS",
+      "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+      "height": 1012,
+      "contentLength": 38922473
+    },
+    "audio": {
+      "itag": 140,
+      "client": "IOS",
+      "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+      "height": 0,
+      "contentLength": 4253638
+    },
+    "progressive": {
+      "itag": 18,
+      "client": "ANDROID",
+      "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+      "height": 338,
+      "contentLength": 0
+    }
+  },
+  "onlineStream": {
+    "phase": "online-playback-pass",
+    "lastError": "",
+    "result": {
+      "at": "2026-07-14T17:20:02.287Z",
+      "type": "online-playback-result",
+      "ok": true,
+      "quality": "360p",
+      "videoItag": 18,
+      "audioItag": 18,
+      "videoReadyState": 4,
+      "videoCurrentTime": 1.168929,
+      "audioReadyState": null,
+      "audioCurrentTime": null,
+      "drift": 0,
+      "playResults": [
+        "fulfilled"
+      ]
+    }
+  },
+  "cache": {
+    "phase": "cached",
+    "lastError": "",
+    "manifest": {
+      "videoId": "nZvY6EaKfh8",
+      "expectedBytes": 0,
+      "video": {
+        "itag": 18,
+        "observed": {
+          "type": "opaque",
+          "status": 0,
+          "bodyVisible": false
+        }
+      },
+      "audio": null,
+      "storageBefore": {
+        "usage": 8904,
+        "quota": 10737427144
+      },
+      "storageAfter": {
+        "usage": 20900816,
+        "quota": 10758319056
+      }
+    },
+    "cacheKeys": [
+      {
+        "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+        "itag": "18",
+        "range": "0-"
+      }
+    ]
+  },
+  "playback": {
+    "phase": "cache-playback-pass",
+    "lastError": "",
+    "video": {
+      "readyState": 4,
+      "networkState": 1,
+      "duration": 262.733787,
+      "currentTime": 1.179745,
+      "error": null
+    },
+    "audio": {
+      "readyState": 0,
+      "currentTime": 0,
+      "error": null
+    },
+    "serviceWorkerEvents": []
+  },
+  "nativeDownload": {
+    "available": true,
+    "href": {
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": true
+    },
+    "suggestedFilename": "Ceeka RSA & Tyler ICU - Jealousy (Australia Tour, Lyric Video) ft. Leemckrazy & Khalil Harrison.mp4",
+    "bytes": 14927857,
+    "first32Hex": "00000018667479706d7034320000000069736f6d6d7034320001c3866d6f6f76"
+  },
+  "finishedAt": "2026-07-14T17:20:06.246Z",
+  "pass": true
+}

@@ -1,0 +1,173 @@
+{
+  "videoId": "A9-t86OAtM0",
+  "createdAt": "2026-07-14T16:25:40.052Z",
+  "clients": [
+    {
+      "label": "IOS",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "offlineability": {
+          "buttonRenderer": {
+            "navigationEndpoint": {
+              "clickTrackingParams": "CA0Q6ewBIhMIiLWhw8rSlQMVPi-zBR0k6Dp4ygEEI6ouNw==",
+              "ypcGetOfflineUpsellEndpoint": {
+                "params": "ChPqqN25AQ0KC0E5LXQ4Nk9BdE0wIgtBOS10ODZPQXRNMCoVCAkYAVIPCgtBOS10ODZPQXRNMCAB"
+              }
+            },
+            "trackingParams": "CA0Q6ewBIhMIiLWhw8rSlQMVPi-zBR0k6Dp4"
+          }
+        },
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW",
+            "enableStashedPlayback": false
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I=",
+        "paygatedQualitiesMetadata": {
+          "qualityDetails": [
+            {
+              "key": "720p",
+              "value": {
+                "paygatedIndicatorText": "Super resolution",
+                "trackingParams": "CAwQwqIJIhMIiLWhw8rSlQMVPi-zBR0k6Dp4",
+                "loggingDirectives": {
+                  "trackingParams": "CAwQwqIJIhMIiLWhw8rSlQMVPi-zBR0k6Dp4",
+                  "visibility": {
+                    "types": "12"
+                  },
+                  "clientVeSpec": {
+                    "uiType": 156595,
+                    "veCounter": 949052133
+                  }
+                }
+              }
+            },
+            {
+              "key": "1080p",
+              "value": {
+                "paygatedIndicatorText": "Super resolution",
+                "trackingParams": "CAsQwqIJIhMIiLWhw8rSlQMVPi-zBR0k6Dp4",
+                "loggingDirectives": {
+                  "trackingParams": "CAsQwqIJIhMIiLWhw8rSlQMVPi-zBR0k6Dp4",
+                  "visibility": {
+                    "types": "12"
+                  },
+                  "clientVeSpec": {
+                    "uiType": 156595,
+                    "veCounter": 949052132
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "adaptiveFormats",
+        "aspectRatio",
+        "serverAbrStreamingUrl",
+        "metadataFormats"
+      ],
+      "directFormats": 0,
+      "directAdaptiveFormats": 15,
+      "hls": null,
+      "hasDashManifest": false,
+      "hasServerAbr": true
+    },
+    {
+      "label": "ANDROID_VR",
+      "httpStatus": 200,
+      "playability": {
+        "status": "LOGIN_REQUIRED",
+        "reason": "Sign in to confirm you’re not a bot",
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [],
+      "directFormats": 0,
+      "directAdaptiveFormats": 0,
+      "hls": null,
+      "hasDashManifest": false,
+      "hasServerAbr": false
+    },
+    {
+      "label": "ANDROID",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "offlineability": {
+          "buttonRenderer": {
+            "serviceEndpoint": {
+              "clickTrackingParams": "CAgQ6ewBIhMIsf7Fw8rSlQMVCSOzBR0I-SfQygEESY9PWg==",
+              "ypcGetOfflineUpsellEndpoint": {
+                "params": "ChPqqN25AQ0KC0E5LXQ4Nk9BdE0wIgtBOS10ODZPQXRNMCoVCAkYAVIPCgtBOS10ODZPQXRNMCAB"
+              }
+            },
+            "trackingParams": "CAgQ6ewBIhMIsf7Fw8rSlQMVCSOzBR0I-SfQ"
+          }
+        },
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW",
+            "enableStashedPlayback": false
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I=",
+        "paygatedQualitiesMetadata": {
+          "qualityDetails": [
+            {
+              "key": "1080p",
+              "value": {
+                "paygatedIndicatorText": "Super resolution",
+                "trackingParams": "CAcQwqIJIhMIsf7Fw8rSlQMVCSOzBR0I-SfQ",
+                "loggingDirectives": {
+                  "trackingParams": "CAcQwqIJIhMIsf7Fw8rSlQMVCSOzBR0I-SfQ",
+                  "visibility": {
+                    "types": "12"
+                  },
+                  "clientVeSpec": {
+                    "uiType": 156595,
+                    "veCounter": 426285990
+                  }
+                }
+              }
+            },
+            {
+              "key": "720p",
+              "value": {
+                "paygatedIndicatorText": "Super resolution",
+                "trackingParams": "CAYQwqIJIhMIsf7Fw8rSlQMVCSOzBR0I-SfQ",
+                "loggingDirectives": {
+                  "trackingParams": "CAYQwqIJIhMIsf7Fw8rSlQMVCSOzBR0I-SfQ",
+                  "visibility": {
+                    "types": "12"
+                  },
+                  "clientVeSpec": {
+                    "uiType": 156595,
+                    "veCounter": 426285989
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "formats",
+        "adaptiveFormats",
+        "serverAbrStreamingUrl",
+        "metadataFormats"
+      ],
+      "directFormats": 1,
+      "directAdaptiveFormats": 0,
+      "hls": null,
+      "hasDashManifest": false,
+      "hasServerAbr": true
+    }
+  ]
+}

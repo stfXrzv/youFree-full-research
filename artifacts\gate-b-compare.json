@@ -1,0 +1,98 @@
+{
+  "schema": "vibestream-gate-b-compare-v1",
+  "recordedAt": "2026-07-16T18:33:39.705Z",
+  "videoId": "A9-t86OAtM0",
+  "comparisons": {
+    "id": {
+      "pass": true,
+      "pyodide": "A9-t86OAtM0",
+      "desktop": "A9-t86OAtM0"
+    },
+    "title": {
+      "pass": true,
+      "pyodide": "Just Lose It (Director's Cut) by Eminem | Eminem",
+      "desktop": "Just Lose It (Director's Cut) by Eminem | Eminem"
+    },
+    "duration": {
+      "pass": true,
+      "pyodide": 246,
+      "desktop": 246
+    },
+    "formatCount": {
+      "pass": true,
+      "pyodide": 24,
+      "desktop": 24
+    },
+    "directCount": {
+      "pass": true,
+      "pyodide": 24,
+      "desktop": 24
+    },
+    "maxHeight": {
+      "pass": true,
+      "pyodide": 1080,
+      "desktop": 1080
+    },
+    "hasAudio": {
+      "pass": true,
+      "pyodide": true,
+      "desktop": true
+    },
+    "itags": {
+      "pass": true,
+      "pyodide": [
+        "133",
+        "134",
+        "135",
+        "139",
+        "140",
+        "160",
+        "242",
+        "243",
+        "244",
+        "247-sr",
+        "248-sr",
+        "249",
+        "250",
+        "251",
+        "278",
+        "394",
+        "395",
+        "396",
+        "397",
+        "398-sr",
+        "399-sr",
+        "sb0",
+        "sb1",
+        "sb2"
+      ],
+      "desktop": [
+        "133",
+        "134",
+        "135",
+        "139",
+        "140",
+        "160",
+        "242",
+        "243",
+        "244",
+        "247-sr",
+        "248-sr",
+        "249",
+        "250",
+        "251",
+        "278",
+        "394",
+        "395",
+        "396",
+        "397",
+        "398-sr",
+        "399-sr",
+        "sb0",
+        "sb1",
+        "sb2"
+      ]
+    }
+  },
+  "pass": true
+}

@@ -1,0 +1,182 @@
+{
+  "videoId": "A9-t86OAtM0",
+  "createdAt": "2026-07-14T16:26:42.397Z",
+  "playability": {
+    "status": "OK",
+    "playableInEmbed": true,
+    "offlineability": {
+      "buttonRenderer": {
+        "serviceEndpoint": {
+          "clickTrackingParams": "CAgQ6ewBIhMIh82k4MrSlQMVYuRyCR2HCzLWygEEvqYzAA==",
+          "ypcGetOfflineUpsellEndpoint": {
+            "params": "ChPqqN25AQ0KC0E5LXQ4Nk9BdE0wIgtBOS10ODZPQXRNMCoVCAkYAVIPCgtBOS10ODZPQXRNMCAB"
+          }
+        },
+        "trackingParams": "CAgQ6ewBIhMIh82k4MrSlQMVYuRyCR2HCzLW"
+      }
+    },
+    "miniplayer": {
+      "miniplayerRenderer": {
+        "playbackMode": "PLAYBACK_MODE_ALLOW",
+        "enableStashedPlayback": false
+      }
+    },
+    "contextParams": "Q0FFU0FnZ0I=",
+    "paygatedQualitiesMetadata": {
+      "qualityDetails": [
+        {
+          "key": "1080p",
+          "value": {
+            "paygatedIndicatorText": "Super resolution",
+            "trackingParams": "CAYQwqIJIhMIh82k4MrSlQMVYuRyCR2HCzLW",
+            "loggingDirectives": {
+              "trackingParams": "CAYQwqIJIhMIh82k4MrSlQMVYuRyCR2HCzLW",
+              "visibility": {
+                "types": "12"
+              },
+              "clientVeSpec": {
+                "uiType": 156595,
+                "veCounter": 589635136
+              }
+            }
+          }
+        },
+        {
+          "key": "720p",
+          "value": {
+            "paygatedIndicatorText": "Super resolution",
+            "trackingParams": "CAcQwqIJIhMIh82k4MrSlQMVYuRyCR2HCzLW",
+            "loggingDirectives": {
+              "trackingParams": "CAcQwqIJIhMIh82k4MrSlQMVYuRyCR2HCzLW",
+              "visibility": {
+                "types": "12"
+              },
+              "clientVeSpec": {
+                "uiType": 156595,
+                "veCounter": 589635137
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "format": {
+    "itag": 18,
+    "qualityLabel": "360p",
+    "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+    "contentLength": 0,
+    "durationMs": 245620,
+    "urlHost": "rr2---sn-8pgbpohxqp5-aiges.googlevideo.com"
+  },
+  "tests": [
+    {
+      "label": "base",
+      "status": 200,
+      "queryRange": null,
+      "headerRange": null,
+      "title": false,
+      "contentLength": "11454973",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": null
+    },
+    {
+      "label": "header-1k",
+      "status": 206,
+      "queryRange": null,
+      "headerRange": "0-1023",
+      "title": false,
+      "contentLength": "1024",
+      "contentRange": "bytes 0-1023/11454973",
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": null
+    },
+    {
+      "label": "header-open",
+      "status": 206,
+      "queryRange": null,
+      "headerRange": "0-",
+      "title": false,
+      "contentLength": "11454973",
+      "contentRange": "bytes 0-11454972/11454973",
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": null
+    },
+    {
+      "label": "query-1k",
+      "status": 200,
+      "queryRange": "0-1023",
+      "headerRange": null,
+      "title": false,
+      "contentLength": "1024",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": null
+    },
+    {
+      "label": "query-open",
+      "status": 200,
+      "queryRange": "0-",
+      "headerRange": null,
+      "title": false,
+      "contentLength": "11454973",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": null
+    },
+    {
+      "label": "query-full",
+      "status": 200,
+      "queryRange": "0-0",
+      "headerRange": null,
+      "title": false,
+      "contentLength": "1",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": null
+    },
+    {
+      "label": "title-base",
+      "status": 200,
+      "queryRange": null,
+      "headerRange": null,
+      "title": true,
+      "contentLength": "11454973",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": "attachment; filename=\"VibeStream Native Test.mp4\""
+    },
+    {
+      "label": "title-query-open",
+      "status": 200,
+      "queryRange": "0-",
+      "headerRange": null,
+      "title": true,
+      "contentLength": "11454973",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": "attachment; filename=\"VibeStream Native Test.mp4\""
+    },
+    {
+      "label": "title-query-full",
+      "status": 200,
+      "queryRange": "0-0",
+      "headerRange": null,
+      "title": true,
+      "contentLength": "1",
+      "contentRange": null,
+      "acceptRanges": "bytes",
+      "contentType": "video/mp4",
+      "contentDisposition": "attachment; filename=\"VibeStream Native Test.mp4\""
+    }
+  ]
+}

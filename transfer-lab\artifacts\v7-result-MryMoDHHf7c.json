@@ -1,0 +1,322 @@
+{
+  "startedAt": "2026-07-16T18:17:36.734Z",
+  "target": "http://localhost/aaa/ytdwl/_cache_lab/query-range-v7/",
+  "inputUrl": "https://www.youtube.com/watch?v=MryMoDHHf7c",
+  "requirements": {
+    "maxMediaBytes": 104857600,
+    "noExtension": true,
+    "noMediaRelay": true
+  },
+  "console": [
+    "[VBS-V7] service-worker-ready {ok: true, strictOffline: false, cache: vibestream-query-range-v7-media}",
+    "[VBS-V7] resolve-start {videoId: MryMoDHHf7c}",
+    "[VBS-V7] resolver-client {client: IOS, status: 200, playability: OK, formats: 23, reason: }",
+    "[VBS-V7] resolver-client {client: ANDROID, status: 200, playability: OK, formats: 1, reason: }",
+    "[VBS-V7] resolve-complete {video: Object, audio: Object, progressive: Object, adaptiveBytes: 39147536, progressiveBytes: 23274906}",
+    "[VBS-V7] service-worker {type: vbs-media-request, itag: 18, rangeQuery: 0-, rangeHeader: bytes=0-, destination: video}",
+    "[VBS-V7] online-playback-result {ok: true, quality: 360p, videoItag: 18, audioItag: 18, videoReadyState: 4}",
+    "[VBS-V7] cache-fetch-start {kind: progressive, itag: 18, expectedBytes: 23274906, estimated: false, rangeInQuery: true}",
+    "[VBS-V7] service-worker {type: vbs-media-request, itag: 18, rangeQuery: 0-, rangeHeader: , destination: }",
+    "[VBS-V7] cache-fetch-complete {kind: progressive, itag: 18, expectedBytes: 23274906, estimated: false, elapsedMs: 1013}",
+    "[VBS-V7] cache-complete {expectedBytes: 23274906, usageDelta: 28232641, manifestStoredIn: IndexedDB, mediaStoredIn: Cache Storage}",
+    "[VBS-V7] strict-offline-enabled {enabled: true}",
+    "[VBS-V7] cache-playback-result {ok: true, cacheHits: 0, cacheVerified: true, blockedMiss: false, videoReadyState: 4}"
+  ],
+  "requests": [
+    {
+      "at": 1784225857410,
+      "resourceType": "document",
+      "rangeHeader": "",
+      "host": "localhost",
+      "path": "/aaa/ytdwl/_cache_lab/query-range-v7/",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225858870,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225859840,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225860803,
+      "resourceType": "media",
+      "rangeHeader": "bytes=0-",
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225862737,
+      "resourceType": "fetch",
+      "rangeHeader": "",
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    }
+  ],
+  "responses": [
+    {
+      "at": 1784225859832,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225860724,
+      "status": 200,
+      "fromServiceWorker": false,
+      "host": "release-youtubei.sandbox.googleapis.com",
+      "path": "/youtubei/v1/player",
+      "itag": "",
+      "range": "",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225860910,
+      "status": 206,
+      "fromServiceWorker": true,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    },
+    {
+      "at": 1784225862785,
+      "status": 200,
+      "fromServiceWorker": true,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "path": "/videoplayback",
+      "itag": "18",
+      "range": "0-",
+      "hasTitle": false
+    }
+  ],
+  "checks": {
+    "boot": {
+      "pass": true,
+      "title": "VibeStream Browser Transfer Lab"
+    },
+    "resolveUnder100Mb": {
+      "pass": true,
+      "bytes": 39147536
+    },
+    "onlineDirectPlayback": {
+      "pass": true,
+      "phase": "online-playback-pass",
+      "detectedHeight": 1080,
+      "playableHeight": 360,
+      "mediaHosts": [
+        "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com"
+      ],
+      "responses": [
+        {
+          "at": 1784225860910,
+          "status": 206,
+          "fromServiceWorker": true,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "path": "/videoplayback",
+          "itag": "18",
+          "range": "0-",
+          "hasTitle": false
+        }
+      ],
+      "result": {
+        "at": "2026-07-16T18:17:42.635Z",
+        "type": "online-playback-result",
+        "ok": true,
+        "quality": "360p",
+        "videoItag": 18,
+        "audioItag": 18,
+        "videoReadyState": 4,
+        "videoCurrentTime": 1.219816,
+        "audioReadyState": null,
+        "audioCurrentTime": null,
+        "drift": 0,
+        "playResults": [
+          "fulfilled"
+        ]
+      }
+    },
+    "directGooglevideoTransfer": {
+      "pass": true,
+      "mediaResponses": [
+        {
+          "at": 1784225862785,
+          "status": 200,
+          "fromServiceWorker": true,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "path": "/videoplayback",
+          "itag": "18",
+          "range": "0-",
+          "hasTitle": false
+        }
+      ]
+    },
+    "opaqueCache": {
+      "pass": true,
+      "entries": 1
+    },
+    "noMediaRelay": {
+      "pass": true,
+      "observedMediaHosts": [
+        "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com"
+      ]
+    },
+    "offlinePlayback": {
+      "pass": true,
+      "phase": "cache-playback-pass",
+      "newNetworkRequests": 0,
+      "serviceWorkerResponses": []
+    },
+    "nativeDispositionPolicy": {
+      "pass": true,
+      "available": false,
+      "reason": "Googlevideo serves this asset inline; the UI does not promise a browser-only file export"
+    }
+  },
+  "resolve": {
+    "phase": "resolved",
+    "lastError": "",
+    "attempts": [
+      {
+        "client": "IOS",
+        "status": 200,
+        "playability": "OK",
+        "formats": 23,
+        "reason": ""
+      },
+      {
+        "client": "ANDROID",
+        "status": 200,
+        "playability": "OK",
+        "formats": 1,
+        "reason": ""
+      }
+    ],
+    "title": "HUGEL x Topic x Arash feat. Andrw Flamez | LIBERATION REMIX- (2026 Summer Afro House) AFRO HOUSE",
+    "video": {
+      "itag": 248,
+      "client": "IOS",
+      "mimeType": "video/webm; codecs=\"vp09.00.40.08\"",
+      "height": 1080,
+      "contentLength": 34722295,
+      "estimatedContentLength": 34722295
+    },
+    "audio": {
+      "itag": 251,
+      "client": "IOS",
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "height": 0,
+      "contentLength": 4425241,
+      "estimatedContentLength": 4425241
+    },
+    "progressive": {
+      "itag": 18,
+      "client": "ANDROID",
+      "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+      "height": 360,
+      "contentLength": 23274906,
+      "estimatedContentLength": 23274906
+    }
+  },
+  "onlineStream": {
+    "phase": "online-playback-pass",
+    "lastError": "",
+    "result": {
+      "at": "2026-07-16T18:17:42.635Z",
+      "type": "online-playback-result",
+      "ok": true,
+      "quality": "360p",
+      "videoItag": 18,
+      "audioItag": 18,
+      "videoReadyState": 4,
+      "videoCurrentTime": 1.219816,
+      "audioReadyState": null,
+      "audioCurrentTime": null,
+      "drift": 0,
+      "playResults": [
+        "fulfilled"
+      ]
+    }
+  },
+  "cache": {
+    "phase": "cached",
+    "lastError": "",
+    "manifest": {
+      "videoId": "MryMoDHHf7c",
+      "expectedBytes": 23274906,
+      "video": {
+        "itag": 18,
+        "observed": {
+          "type": "opaque",
+          "status": 0,
+          "bodyVisible": false
+        }
+      },
+      "audio": null,
+      "storageBefore": {
+        "usage": 8902,
+        "quota": 10737427142
+      },
+      "storageAfter": {
+        "usage": 28241543,
+        "quota": 10765659783
+      }
+    },
+    "cacheKeys": [
+      {
+        "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+        "itag": "18",
+        "range": "0-"
+      }
+    ]
+  },
+  "playback": {
+    "phase": "cache-playback-pass",
+    "lastError": "",
+    "video": {
+      "readyState": 4,
+      "networkState": 1,
+      "duration": 264.544943,
+      "currentTime": 1.186175,
+      "error": null
+    },
+    "audio": {
+      "readyState": 0,
+      "currentTime": 0,
+      "error": null
+    },
+    "serviceWorkerEvents": []
+  },
+  "nativeDownload": {
+    "available": false,
+    "href": null
+  },
+  "finishedAt": "2026-07-16T18:17:45.256Z",
+  "pass": true
+}

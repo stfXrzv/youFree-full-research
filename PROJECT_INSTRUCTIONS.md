@@ -1,5 +1,15 @@
 # Shared Agent Instructions
 
+## Resume after a Codex restart
+
+Before resuming work, read:
+
+- `C:\Users\Stf x Rzv\.codex\codex_watchdog\state.json`
+- the final line of `C:\Users\Stf x Rzv\.codex\codex_watchdog\events.log`
+
+If the last event is `crashed_restarted`, continue from the latest recorded
+checkpoint instead of restarting the investigation.
+
 `AI_BRIDGE/PLAN_FINAL_V1.md` is the canonical plan.
 
 At the beginning of each task:
@@ -22,4 +32,3 @@ Rules:
 - Do not claim a gate passed without reproducible evidence.
 - Never store cookies, OAuth credentials, API secrets, signed media URLs, or raw private traces in this repository.
 - Do not edit the same mutable file concurrently. Use the ownership boundaries in `README.md`.
-

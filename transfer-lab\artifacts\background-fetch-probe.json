@@ -1,0 +1,23 @@
+{
+  "video": "https://www.youtube.com/watch?v=A9-t86OAtM0",
+  "createdAt": "2026-07-16T18:34:20.804Z",
+  "result": {
+    "id": "vbs-bg-A9-t86OAtM0-1784226857670",
+    "expectedBytes": 0,
+    "result": "failure",
+    "failureReason": "fetch-error",
+    "downloaded": 0,
+    "downloadTotal": 0,
+    "uploaded": 0,
+    "recordsError": "InvalidStateError: Failed to execute 'matchAll' on 'BackgroundFetchRegistration': The records associated with this background fetch are no longer available.",
+    "records": [],
+    "progress": [
+      {
+        "downloaded": 0,
+        "downloadTotal": 0,
+        "result": "failure"
+      }
+    ]
+  },
+  "network": []
+}

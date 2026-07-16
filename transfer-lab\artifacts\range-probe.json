@@ -1,0 +1,608 @@
+{
+  "videoId": "A9-t86OAtM0",
+  "createdAt": "2026-07-14T16:30:13.642Z",
+  "available": [
+    {
+      "itag": 248,
+      "height": 1080,
+      "mimeType": "video/webm; codecs=\"vp09.00.40.08\"",
+      "contentLength": 46806441
+    },
+    {
+      "itag": 399,
+      "height": 1080,
+      "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+      "contentLength": 35275232
+    },
+    {
+      "itag": 247,
+      "height": 720,
+      "mimeType": "video/webm; codecs=\"vp09.00.31.08\"",
+      "contentLength": 27819140
+    },
+    {
+      "itag": 398,
+      "height": 720,
+      "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+      "contentLength": 18974511
+    },
+    {
+      "itag": 135,
+      "height": 480,
+      "mimeType": "video/mp4; codecs=\"avc1.4D401E\"",
+      "contentLength": 15342722
+    },
+    {
+      "itag": 244,
+      "height": 480,
+      "mimeType": "video/webm; codecs=\"vp09.00.30.08\"",
+      "contentLength": 17232652
+    },
+    {
+      "itag": 397,
+      "height": 480,
+      "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+      "contentLength": 12497803
+    },
+    {
+      "itag": 134,
+      "height": 360,
+      "mimeType": "video/mp4; codecs=\"avc1.4D4015\"",
+      "contentLength": 9968924
+    },
+    {
+      "itag": 243,
+      "height": 360,
+      "mimeType": "video/webm; codecs=\"vp09.00.21.08\"",
+      "contentLength": 8814883
+    },
+    {
+      "itag": 396,
+      "height": 360,
+      "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+      "contentLength": 7807928
+    },
+    {
+      "itag": 133,
+      "height": 240,
+      "mimeType": "video/mp4; codecs=\"avc1.4D400D\"",
+      "contentLength": 4889542
+    },
+    {
+      "itag": 242,
+      "height": 240,
+      "mimeType": "video/webm; codecs=\"vp09.00.20.08\"",
+      "contentLength": 4106860
+    },
+    {
+      "itag": 395,
+      "height": 240,
+      "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+      "contentLength": 4098847
+    },
+    {
+      "itag": 160,
+      "height": 144,
+      "mimeType": "video/mp4; codecs=\"avc1.4D400B\"",
+      "contentLength": 2336725
+    },
+    {
+      "itag": 278,
+      "height": 144,
+      "mimeType": "video/webm; codecs=\"vp09.00.11.08\"",
+      "contentLength": 2359589
+    },
+    {
+      "itag": 394,
+      "height": 144,
+      "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+      "contentLength": 1907798
+    },
+    {
+      "itag": 139,
+      "height": 0,
+      "mimeType": "audio/mp4; codecs=\"mp4a.40.5\"",
+      "contentLength": 1498544
+    },
+    {
+      "itag": 140,
+      "height": 0,
+      "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+      "contentLength": 3974771
+    },
+    {
+      "itag": 249,
+      "height": 0,
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "contentLength": 1608747
+    },
+    {
+      "itag": 250,
+      "height": 0,
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "contentLength": 2087397
+    },
+    {
+      "itag": 251,
+      "height": 0,
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "contentLength": 3999471
+    }
+  ],
+  "targets": [
+    {
+      "itag": 399,
+      "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+      "contentLength": 35275232,
+      "initRange": {
+        "start": "0",
+        "end": "699"
+      },
+      "indexRange": {
+        "start": "700",
+        "end": "1295"
+      },
+      "tests": [
+        {
+          "label": "header-1k",
+          "status": 206,
+          "elapsedMs": 87,
+          "queryRange": "",
+          "headerRange": "0-1023",
+          "contentLength": "1024",
+          "contentRange": "bytes 0-1023/35275232",
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "base-no-range",
+          "status": 403,
+          "elapsedMs": 58,
+          "queryRange": "",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-open",
+          "status": 403,
+          "elapsedMs": 57,
+          "queryRange": "0-",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-open-title",
+          "status": 403,
+          "elapsedMs": 54,
+          "queryRange": "0-",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-1024",
+          "status": 200,
+          "elapsedMs": 54,
+          "queryRange": "0-1023",
+          "headerRange": "",
+          "contentLength": "1024",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-65536",
+          "status": 200,
+          "elapsedMs": 54,
+          "queryRange": "0-65535",
+          "headerRange": "",
+          "contentLength": "65536",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-262144",
+          "status": 200,
+          "elapsedMs": 62,
+          "queryRange": "0-262143",
+          "headerRange": "",
+          "contentLength": "262144",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-1048576",
+          "status": 200,
+          "elapsedMs": 56,
+          "queryRange": "0-1048575",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-2097152",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "0-2097151",
+          "headerRange": "",
+          "contentLength": "2097152",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-4194304",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "0-4194303",
+          "headerRange": "",
+          "contentLength": "4194304",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-8388608",
+          "status": 200,
+          "elapsedMs": 58,
+          "queryRange": "0-8388607",
+          "headerRange": "",
+          "contentLength": "8388608",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-12582912",
+          "status": 403,
+          "elapsedMs": 55,
+          "queryRange": "0-12582911",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-16777216",
+          "status": 403,
+          "elapsedMs": 58,
+          "queryRange": "0-16777215",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-25165824",
+          "status": 403,
+          "elapsedMs": 58,
+          "queryRange": "0-25165823",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-35275232",
+          "status": 403,
+          "elapsedMs": 56,
+          "queryRange": "0-35275231",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-1m",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-1k",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "1048576-1049599",
+          "headerRange": "",
+          "contentLength": "1024",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-rn1",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-rn2",
+          "status": 200,
+          "elapsedMs": 58,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-alr",
+          "status": 200,
+          "elapsedMs": 56,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-1m-rn",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "0-1048575",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "video/mp4",
+          "contentDisposition": null
+        }
+      ]
+    },
+    {
+      "itag": 251,
+      "mimeType": "audio/webm; codecs=\"opus\"",
+      "contentLength": 3999471,
+      "initRange": {
+        "start": "0",
+        "end": "258"
+      },
+      "indexRange": {
+        "start": "259",
+        "end": "680"
+      },
+      "tests": [
+        {
+          "label": "header-1k",
+          "status": 206,
+          "elapsedMs": 102,
+          "queryRange": "",
+          "headerRange": "0-1023",
+          "contentLength": "1024",
+          "contentRange": "bytes 0-1023/3999471",
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        },
+        {
+          "label": "base-no-range",
+          "status": 403,
+          "elapsedMs": 56,
+          "queryRange": "",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-open",
+          "status": 403,
+          "elapsedMs": 64,
+          "queryRange": "0-",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-open-title",
+          "status": 403,
+          "elapsedMs": 58,
+          "queryRange": "0-",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-1024",
+          "status": 200,
+          "elapsedMs": 54,
+          "queryRange": "0-1023",
+          "headerRange": "",
+          "contentLength": "1024",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-65536",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "0-65535",
+          "headerRange": "",
+          "contentLength": "65536",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-262144",
+          "status": 200,
+          "elapsedMs": 59,
+          "queryRange": "0-262143",
+          "headerRange": "",
+          "contentLength": "262144",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-1048576",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "0-1048575",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-2097152",
+          "status": 403,
+          "elapsedMs": 58,
+          "queryRange": "0-2097151",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-3999471",
+          "status": 403,
+          "elapsedMs": 56,
+          "queryRange": "0-3999470",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-1m",
+          "status": 403,
+          "elapsedMs": 53,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-1k",
+          "status": 200,
+          "elapsedMs": 54,
+          "queryRange": "1048576-1049599",
+          "headerRange": "",
+          "contentLength": "1024",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-rn1",
+          "status": 403,
+          "elapsedMs": 57,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-rn2",
+          "status": 403,
+          "elapsedMs": 52,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-middle-alr",
+          "status": 403,
+          "elapsedMs": 55,
+          "queryRange": "1048576-2097151",
+          "headerRange": "",
+          "contentLength": "0",
+          "contentRange": null,
+          "acceptRanges": null,
+          "contentType": "text/plain",
+          "contentDisposition": null
+        },
+        {
+          "label": "query-1m-rn",
+          "status": 200,
+          "elapsedMs": 57,
+          "queryRange": "0-1048575",
+          "headerRange": "",
+          "contentLength": "1048576",
+          "contentRange": null,
+          "acceptRanges": "bytes",
+          "contentType": "audio/webm",
+          "contentDisposition": null
+        }
+      ]
+    }
+  ]
+}

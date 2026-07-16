@@ -1,0 +1,17 @@
+{
+  "video": "https://www.youtube.com/watch?v=A9-t86OAtM0",
+  "createdAt": "2026-07-16T18:34:04.990Z",
+  "result": {
+    "cacheResponse": {
+      "type": "opaque",
+      "status": 0,
+      "bodyVisible": false,
+      "blobBytes": 0,
+      "arrayBufferBytes": 0
+    },
+    "opfsSupported": true,
+    "backgroundFetchSupported": true,
+    "showSaveFilePickerSupported": true,
+    "opfsBytesWrittenFromOpaqueBlob": 0
+  }
+}

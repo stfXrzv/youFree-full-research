@@ -1,0 +1,102 @@
+{
+  "videoId": "MryMoDHHf7c",
+  "createdAt": "2026-07-14T17:07:27.375Z",
+  "nodeWeb": {
+    "httpStatus": 200,
+    "playability": "UNPLAYABLE",
+    "hasSabr": false
+  },
+  "browserResult": [
+    {
+      "client": "WEB",
+      "playability": "UNPLAYABLE",
+      "hasSabr": false,
+      "sabrHost": "",
+      "attempts": []
+    },
+    {
+      "client": "IOS",
+      "playability": "OK",
+      "hasSabr": true,
+      "sabrHost": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "attempts": [
+        {
+          "label": "cors-get",
+          "ok": false,
+          "error": "TypeError: Failed to fetch"
+        },
+        {
+          "label": "cors-post-simple",
+          "ok": false,
+          "error": "TypeError: Failed to fetch"
+        },
+        {
+          "label": "cors-post-protobuf",
+          "ok": false,
+          "error": "TypeError: Failed to fetch"
+        },
+        {
+          "label": "no-cors-post",
+          "ok": true,
+          "type": "opaque",
+          "status": 0,
+          "bodyVisible": false,
+          "bytes": 0,
+          "readError": ""
+        }
+      ]
+    },
+    {
+      "client": "ANDROID",
+      "playability": "OK",
+      "hasSabr": true,
+      "sabrHost": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "attempts": [
+        {
+          "label": "cors-get",
+          "ok": false,
+          "error": "TypeError: Failed to fetch"
+        },
+        {
+          "label": "cors-post-simple",
+          "ok": false,
+          "error": "TypeError: Failed to fetch"
+        },
+        {
+          "label": "cors-post-protobuf",
+          "ok": false,
+          "error": "TypeError: Failed to fetch"
+        },
+        {
+          "label": "no-cors-post",
+          "ok": true,
+          "type": "opaque",
+          "status": 0,
+          "bodyVisible": false,
+          "bytes": 0,
+          "readError": ""
+        }
+      ]
+    }
+  ],
+  "network": [
+    {
+      "method": "POST",
+      "status": 200,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "type": "application/vnd.yt-ump",
+      "allowOrigin": "",
+      "allowHeaders": "",
+      "allowMethods": ""
+    },
+    {
+      "method": "POST",
+      "status": 200,
+      "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+      "type": "application/vnd.yt-ump",
+      "allowOrigin": "",
+      "allowHeaders": "",
+      "allowMethods": ""
+    }
+  ]
+}

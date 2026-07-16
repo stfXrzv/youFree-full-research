@@ -36,6 +36,13 @@ __pycache__/
 .mypy_cache/
 .venv/
 venv/
+.chrome-profile/
+transfer-lab/artifacts/capture-*.mp4
+transfer-lab/artifacts/capture-*.webm
+artifacts/mux-proof/*.mp4
+artifacts/mux-proof/*.m4a
+artifacts/mux-fmp4-proof/*.mp4
+artifacts/mux-fmp4-proof/*.m4a
 
 # Editors and operating systems
 .idea/
@@ -43,4 +50,3 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
-

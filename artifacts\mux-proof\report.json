@@ -1,0 +1,38 @@
+{
+  "schema": "vibestream-mux-proof-v1",
+  "recordedAt": "2026-07-16T18:34:41.355Z",
+  "runtime": "Chrome browser Blob mux",
+  "browserResult": {
+    "videoBytes": 404641,
+    "audioBytes": 36560,
+    "outputBytes": 440943,
+    "outputType": "video/mp4",
+    "indexedDbBytes": 440943,
+    "sha256": "0dd7f3777776952257021c6da6afc1d914333da4445de5926fd4646f5a9abb67",
+    "playback": {
+      "ok": true,
+      "duration": 4,
+      "currentTime": 0.112432,
+      "videoWidth": 640,
+      "videoHeight": 360
+    }
+  },
+  "output": {
+    "bytes": 440943,
+    "signature": "000000206674797069736f6d0000020069736f6d69736f32617663316d703431",
+    "duration": 4,
+    "streams": [
+      {
+        "index": 0,
+        "type": "video",
+        "codec": "h264"
+      },
+      {
+        "index": 1,
+        "type": "audio",
+        "codec": "aac"
+      }
+    ]
+  },
+  "pass": true
+}

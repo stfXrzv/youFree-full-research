@@ -1,0 +1,60 @@
+{
+  "createdAt": "2026-07-16T18:26:31.616Z",
+  "layout": {
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "horizontalOverflow": false,
+    "controls": [
+      {
+        "text": "Resolve in browser",
+        "left": 16,
+        "right": 191,
+        "width": 175,
+        "scrollWidth": 173,
+        "clippedText": false
+      },
+      {
+        "text": "Play direct MP4",
+        "left": 199,
+        "right": 374,
+        "width": 175,
+        "scrollWidth": 173,
+        "clippedText": false
+      },
+      {
+        "text": "Save offline",
+        "left": 16,
+        "right": 191,
+        "width": 175,
+        "scrollWidth": 173,
+        "clippedText": false
+      },
+      {
+        "text": "Play offline",
+        "left": 199,
+        "right": 374,
+        "width": 175,
+        "scrollWidth": 173,
+        "clippedText": false
+      },
+      {
+        "text": "Clear offline data",
+        "left": 16,
+        "right": 191,
+        "width": 175,
+        "scrollWidth": 173,
+        "clippedText": false
+      },
+      {
+        "text": "Download MP4",
+        "left": 199,
+        "right": 374,
+        "width": 175,
+        "scrollWidth": 173,
+        "clippedText": false
+      }
+    ]
+  },
+  "consoleErrors": [],
+  "pass": true
+}

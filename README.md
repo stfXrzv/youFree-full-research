@@ -1,8 +1,34 @@
 # VibeStream Browser Resolver
 
-Private coordination repository for the browser-only resolver experiment.
+Private implementation and evidence repository for the browser-only resolver experiment.
 
 This repository is the shared source of truth for Codex and ChatGPT Work. It intentionally excludes cookies, OAuth credentials, signed media URLs, private logs, and large generated artifacts.
+
+## Laboratories
+
+- `lab/`: Phase 0/1 transport matrix and the Pyodide + `yt-dlp` resolver path.
+- `transfer-lab/`: direct Googlevideo streaming, opaque Cache Storage, strict offline playback, native download policy, OPFS, Background Fetch and capture probes.
+- `tests/`: deterministic unit and browser runners for Gate A and Gate B.
+
+Local entry points:
+
+- `http://localhost/aaa/vibestream-browser-resolver/lab/`
+- `http://localhost/aaa/vibestream-browser-resolver/transfer-lab/`
+
+Useful commands:
+
+```text
+npm test
+npm run test:gate-a
+npm run test:gate-b
+npm run test:pyodide
+npm run test:transfer
+npm run test:storage
+npm run test:capture
+npm run test:background
+npm run test:mux
+npm run test:mux:fmp4
+```
 
 ## Agent workflow
 
@@ -24,4 +50,3 @@ At the end of every task:
 - Codex writes `STATUS_CODEX.md` and `to_work/`.
 - ChatGPT Work writes `STATUS_WORK.md` and `to_codex/`.
 - `PLAN_FINAL_V1.md` is canonical and changes only with an explicit recorded decision.
-

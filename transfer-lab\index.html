@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>VibeStream Browser Transfer Lab</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; background: #0b0b0d; color: #f5f5f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #0b0b0d; }
+    main { width: min(920px, 100%); margin: 0 auto; padding: 24px 16px 56px; }
+    h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: 0; }
+    .sub { margin: 0 0 22px; color: #a9a9b2; }
+    .panel { padding: 16px 0; border-top: 1px solid #2a2a31; }
+    label { display: block; margin-bottom: 8px; color: #d6d6dc; font-size: 14px; }
+    input { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #34343c; border-radius: 6px; color: #fff; background: #151519; font: inherit; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    button, .download-link { min-height: 42px; padding: 10px 14px; border: 1px solid #3c3c45; border-radius: 6px; color: #fff; background: #202026; font: 600 14px/1 system-ui, sans-serif; cursor: pointer; text-decoration: none; }
+    button.primary { border-color: #ff3f75; background: #df285d; }
+    button:disabled, .download-link[aria-disabled="true"] { opacity: .42; cursor: not-allowed; }
+    .status { min-height: 76px; margin-top: 14px; padding: 12px; border-left: 3px solid #73737d; background: #151519; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .status.ok { border-color: #35c98b; }
+    .status.bad { border-color: #ff5a66; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    .metric { min-width: 0; padding: 12px; background: #151519; border: 1px solid #292930; border-radius: 6px; }
+    .metric span { display: block; color: #9696a0; font-size: 12px; }
+    .metric strong { display: block; margin-top: 4px; overflow-wrap: anywhere; }
+    video { display: block; width: 100%; margin-top: 14px; aspect-ratio: 16 / 9; background: #000; }
+    audio { width: 100%; margin-top: 8px; }
+    pre { max-height: 300px; overflow: auto; margin: 0; padding: 12px; color: #c8c8d0; background: #111114; border: 1px solid #28282e; font: 12px/1.5 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+    @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } button, .download-link { flex: 1 1 calc(50% - 4px); } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>VibeStream Browser Transfer Lab</h1>
+  <p class="sub">Direct Googlevideo transfer, offline browser storage and verified fallback behavior.</p>
+
+  <section class="panel">
+    <label for="youtube-url">YouTube URL or video ID</label>
+    <input id="youtube-url" data-testid="youtube-url" value="https://www.youtube.com/watch?v=A9-t86OAtM0" autocomplete="off">
+    <div class="actions">
+      <button id="resolve" class="primary" data-testid="resolve" type="button">Resolve in browser</button>
+      <button id="stream" data-testid="stream" type="button" disabled>Play direct MP4</button>
+      <button id="cache" data-testid="cache" type="button" disabled>Save offline</button>
+      <button id="play" data-testid="play" type="button" disabled>Play offline</button>
+      <button id="clear" data-testid="clear" type="button">Clear offline data</button>
+      <a id="native-download" class="download-link" data-testid="native-download" href="#" aria-disabled="true">Download MP4</a>
+    </div>
+    <div id="status" class="status" role="status">Ready.</div>
+  </section>
+
+  <section class="panel">
+    <div class="grid">
+      <div class="metric"><span>Resolver</span><strong id="resolver-metric">-</strong></div>
+      <div class="metric"><span>Detected / playable</span><strong id="quality-metric">-</strong></div>
+      <div class="metric"><span>Offline transfer</span><strong id="size-metric">-</strong></div>
+    </div>
+    <video id="video" controls playsinline preload="metadata"></video>
+    <audio id="audio" preload="metadata"></audio>
+  </section>
+
+  <section class="panel">
+    <label>Network and cache evidence</label>
+    <pre id="log" data-testid="log">No events yet.</pre>
+  </section>
+</main>
+
+<script>
+"use strict";
+
+const PLAYER_ENDPOINT = "https://release-youtubei.sandbox.googleapis.com/youtubei/v1/player";
+const MEDIA_CACHE = "vibestream-query-range-v7-media";
+const DB_NAME = "vibestream-query-range-v7";
+const MAX_BYTES = 100 * 1024 * 1024;
+const DEFAULT_VIDEO_ID = "A9-t86OAtM0";
+const CLIENTS = [
+  ["IOS", {
+    clientName: "IOS", clientVersion: "21.02.3", deviceMake: "Apple", deviceModel: "iPhone16,2",
+    userAgent: "com.google.ios.youtube/21.02.3 (iPhone16,2; U; CPU iOS 18_3_2 like Mac OS X;)",
+    osName: "iPhone", osVersion: "18.3.2.22D82", hl: "en"
+  }],
+  ["ANDROID", {
+    clientName: "ANDROID", clientVersion: "21.02.35", androidSdkVersion: 30,
+    userAgent: "com.google.android.youtube/21.02.35 (Linux; U; Android 11) gzip",
+    osName: "Android", osVersion: "11", hl: "en"
+  }]
+];
+
+const elements = {
+  input: document.querySelector("#youtube-url"),
+  resolve: document.querySelector("#resolve"),
+  stream: document.querySelector("#stream"),
+  cache: document.querySelector("#cache"),
+  play: document.querySelector("#play"),
+  clear: document.querySelector("#clear"),
+  nativeDownload: document.querySelector("#native-download"),
+  status: document.querySelector("#status"),
+  resolver: document.querySelector("#resolver-metric"),
+  quality: document.querySelector("#quality-metric"),
+  size: document.querySelector("#size-metric"),
+  video: document.querySelector("#video"),
+  audio: document.querySelector("#audio"),
+  log: document.querySelector("#log")
+};
+
+const state = window.__vbsV7 = {
+  phase: "boot",
+  attempts: [],
+  selected: null,
+  manifest: null,
+  events: [],
+  lastError: ""
+};
+
+function log(type, detail = {}) {
+  const entry = { at: new Date().toISOString(), type, ...detail };
+  state.events.push(entry);
+  if (state.events.length > 80) state.events.shift();
+  elements.log.textContent = JSON.stringify(state.events, null, 2);
+  console.log("[VBS-V7]", type, detail);
+}
+
+function setStatus(message, kind = "") {
+  elements.status.textContent = message;
+  elements.status.className = "status" + (kind ? " " + kind : "");
+}
+
+function formatBytes(bytes) {
+  if (!Number.isFinite(bytes) || bytes <= 0) return "unknown";
+  const units = ["B", "KB", "MB", "GB"];
+  let value = bytes;
+  let unit = 0;
+  while (value >= 1024 && unit < units.length - 1) { value /= 1024; unit += 1; }
+  return value.toFixed(unit > 1 ? 1 : 0) + " " + units[unit];
+}
+
+function extractVideoId(value) {
+  const trimmed = value.trim();
+  if (/^[A-Za-z0-9_-]{11}$/.test(trimmed)) return trimmed;
+  try {
+    const url = new URL(trimmed);
+    if (url.hostname === "youtu.be") return url.pathname.split("/").filter(Boolean)[0] || "";
+    if (url.pathname.startsWith("/shorts/")) return url.pathname.split("/")[2] || "";
+    return url.searchParams.get("v") || "";
+  } catch (_) {
+    return "";
+  }
+}
+
+function normalizeFormat(format, client) {
+  const mimeType = String(format.mimeType || "");
+  const isVideo = mimeType.startsWith("video/") || Number(format.height || 0) > 0;
+  const isAudio = mimeType.startsWith("audio/") || Boolean(format.audioQuality || format.audioChannels);
+  let urlContentLength = 0;
+  try { urlContentLength = Number(new URL(format.url || "").searchParams.get("clen") || 0); } catch (_) {}
+  const bitrate = Number(format.bitrate || format.averageBitrate || 0);
+  const approxDurationMs = Number(format.approxDurationMs || 0);
+  const contentLength = Number(format.contentLength || urlContentLength || 0);
+  return {
+    itag: Number(format.itag || 0),
+    client,
+    mimeType,
+    width: Number(format.width || 0),
+    height: Number(format.height || 0),
+    fps: Number(format.fps || 0),
+    qualityLabel: format.qualityLabel || "",
+    audioQuality: format.audioQuality || "",
+    bitrate,
+    contentLength,
+    estimatedContentLength: contentLength || (bitrate > 0 && approxDurationMs > 0 ? Math.ceil(bitrate * approxDurationMs / 8000) : 0),
+    approxDurationMs,
+    isVideo,
+    isAudio,
+    url: format.url || ""
+  };
+}
+
+function isPlayable(format) {
+  if (!format.mimeType) return false;
+  const probe = format.isVideo ? elements.video : elements.audio;
+  return probe.canPlayType(format.mimeType) !== "";
+}
+
+function qualityRank(height) {
+  if (height === 1080) return 0;
+  if (height > 1080) return 1000 + height;
+  return 2000 - height;
+}
+
+function chooseStreams(formats) {
+  const videoOnly = formats
+    .filter(item => item.url && item.contentLength > 0 && item.isVideo && !item.isAudio && isPlayable(item))
+    .sort((a, b) => qualityRank(a.height) - qualityRank(b.height) || a.contentLength - b.contentLength);
+  const audioOnly = formats
+    .filter(item => item.url && item.contentLength > 0 && !item.isVideo && item.isAudio && isPlayable(item))
+    .sort((a, b) => b.contentLength - a.contentLength);
+  const progressive = formats
+    .filter(item => item.url && item.isVideo && item.isAudio && isPlayable(item))
+    .sort((a, b) => b.height - a.height || a.contentLength - b.contentLength);
+
+  for (const video of videoOnly) {
+    for (const audio of audioOnly) {
+      if (video.contentLength + audio.contentLength <= MAX_BYTES) {
+        return { video, audio, progressive: progressive[0] || null };
+      }
+    }
+  }
+
+  if (progressive[0] && (!progressive[0].contentLength || progressive[0].contentLength <= MAX_BYTES)) {
+    return { video: progressive[0], audio: null, progressive: progressive[0] };
+  }
+  throw new Error("No browser-playable selection below 100 MB was found");
+}
+
+async function fetchPlayer(videoId, label, client) {
+  const response = await fetch(PLAYER_ENDPOINT, {
+    method: "POST",
+    mode: "cors",
+    credentials: "omit",
+    cache: "no-store",
+    referrerPolicy: "no-referrer",
+    body: JSON.stringify({
+      videoId,
+      context: {
+        client,
+        user: { lockedSafetyMode: false },
+        request: { useSsl: true, internalExperimentFlags: [], consistencyTokenJars: [] }
+      },
+      playbackContext: { contentPlaybackContext: { html5Preference: "HTML5_PREF_WANTS", lactMilliseconds: "-1" } },
+      contentCheckOk: true,
+      racyCheckOk: true
+    })
+  });
+  const player = await response.json();
+  const rawFormats = [...(player.streamingData?.formats || []), ...(player.streamingData?.adaptiveFormats || [])];
+  const formats = rawFormats.map(item => normalizeFormat(item, label)).filter(item => item.url);
+  return {
+    label,
+    httpStatus: response.status,
+    playability: player.playabilityStatus?.status || "UNKNOWN",
+    reason: player.playabilityStatus?.reason || "",
+    title: player.videoDetails?.title || videoId,
+    author: player.videoDetails?.author || "",
+    formats
+  };
+}
+
+async function resolveInBrowser() {
+  const videoId = extractVideoId(elements.input.value) || DEFAULT_VIDEO_ID;
+  state.phase = "resolving";
+  state.attempts = [];
+  state.selected = null;
+  state.downloadTarget = null;
+  state.lastError = "";
+  elements.cache.disabled = true;
+  elements.stream.disabled = true;
+  elements.play.disabled = true;
+  elements.nativeDownload.setAttribute("aria-disabled", "true");
+  elements.nativeDownload.href = "#";
+  elements.nativeDownload.removeAttribute("title");
+  setStatus("Resolving on this browser/IP...");
+  log("resolve-start", { videoId });
+
+  const allFormats = [];
+  let title = videoId;
+  let author = "";
+  for (const [label, client] of CLIENTS) {
+    try {
+      const result = await fetchPlayer(videoId, label, client);
+      state.attempts.push({ client: label, status: result.httpStatus, playability: result.playability, formats: result.formats.length, reason: result.reason });
+      allFormats.push(...result.formats);
+      if (result.title) title = result.title;
+      if (result.author) author = result.author;
+      log("resolver-client", state.attempts[state.attempts.length - 1]);
+    } catch (error) {
+      state.attempts.push({ client: label, error: error.message });
+      log("resolver-client-error", { client: label, error: error.message });
+    }
+  }
+
+  const selected = chooseStreams(allFormats);
+  state.selected = { videoId, title, author, ...selected };
+  state.phase = "resolved";
+  const adaptiveBytes = selected.video.contentLength + (selected.audio?.contentLength || 0);
+  const progressiveBytes = selected.progressive?.contentLength || selected.progressive?.estimatedContentLength || 0;
+  const progressiveEstimated = Boolean(selected.progressive && !selected.progressive.contentLength && selected.progressive.estimatedContentLength);
+  const detectedQuality = selected.video.qualityLabel || selected.video.height + "p";
+  const playableQuality = selected.progressive ? (selected.progressive.qualityLabel || selected.progressive.height + "p") : "none";
+  elements.resolver.textContent = selected.video.client + (selected.audio ? " + " + selected.audio.client : "");
+  elements.quality.textContent = detectedQuality + " / " + playableQuality;
+  elements.size.textContent = (progressiveEstimated ? "~" : "") + formatBytes(progressiveBytes);
+  elements.cache.disabled = !selected.progressive;
+  elements.stream.disabled = !selected.progressive;
+
+  if (selected.progressive) {
+    const downloadUrl = makeDownloadUrl(selected.progressive, title);
+    const filename = safeFilename(title) + ".mp4";
+    const urlShape = new URL(selected.progressive.url);
+    const attachmentExpected = urlShape.searchParams.has("cnr") && !urlShape.searchParams.has("gir");
+    state.downloadTarget = { directUrl: downloadUrl, attachmentExpected };
+    elements.nativeDownload.download = filename;
+    elements.nativeDownload.title = attachmentExpected ? "" : "This Googlevideo asset is served inline, so browser-only file export is unavailable";
+    if (attachmentExpected) {
+      elements.nativeDownload.href = downloadUrl;
+      elements.nativeDownload.setAttribute("aria-disabled", "false");
+    }
+  }
+
+  setStatus("Resolved on this browser/IP. Detected " + detectedQuality + " (" + formatBytes(adaptiveBytes) + "); direct and offline playback use the combined " + playableQuality + " MP4 (" + (progressiveEstimated ? "about " : "") + formatBytes(progressiveBytes) + ").", "ok");
+  log("resolve-complete", {
+    video: publicFormat(selected.video),
+    audio: selected.audio ? publicFormat(selected.audio) : null,
+    progressive: selected.progressive ? publicFormat(selected.progressive) : null,
+    adaptiveBytes,
+    progressiveBytes,
+    nativeAttachmentExpected: Boolean(state.downloadTarget?.attachmentExpected)
+  });
+}
+
+function publicFormat(format) {
+  return {
+    itag: format.itag,
+    client: format.client,
+    mimeType: format.mimeType,
+    qualityLabel: format.qualityLabel,
+    height: format.height,
+    contentLength: format.contentLength,
+    estimatedContentLength: format.estimatedContentLength
+  };
+}
+
+function safeFilename(value) {
+  return String(value || "video").replace(/[\\/:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim().slice(0, 100) || "video";
+}
+
+function makeRangeUrl(format, attachment = false, title = "") {
+  if (!format?.url || !format.contentLength) throw new Error("Format has no direct URL or content length");
+  const url = new URL(format.url);
+  url.searchParams.set("range", "0-" + (format.contentLength - 1));
+  if (attachment) url.searchParams.set("title", safeFilename(title));
+  return url.href;
+}
+
+function makeDownloadUrl(format, title = "") {
+  if (!format?.url) throw new Error("Format has no direct URL");
+  const url = new URL(format.url);
+  url.searchParams.set("range", "0-");
+  url.searchParams.set("title", safeFilename(title));
+  return url.href;
+}
+
+function makeProgressiveCacheUrl(format) {
+  if (!format?.url) throw new Error("Progressive format has no direct URL");
+  const url = new URL(format.url);
+  url.searchParams.set("range", "0-");
+  return url.href;
+}
+
+async function storageEstimate() {
+  if (!navigator.storage?.estimate) return null;
+  const estimate = await navigator.storage.estimate();
+  return { usage: Number(estimate.usage || 0), quota: Number(estimate.quota || 0) };
+}
+
+async function cacheFormat(kind, format, progressive = false) {
+  const playbackUrl = progressive ? makeProgressiveCacheUrl(format) : makeRangeUrl(format);
+  const request = new Request(playbackUrl, {
+    method: "GET",
+    mode: "no-cors",
+    credentials: "omit",
+    cache: "no-store",
+    redirect: "follow",
+    referrerPolicy: "no-referrer"
+  });
+  const startedAt = performance.now();
+  const expectedBytes = format.contentLength || format.estimatedContentLength || 0;
+  log("cache-fetch-start", { kind, itag: format.itag, expectedBytes, estimated: !format.contentLength && Boolean(expectedBytes), rangeInQuery: true, rangeHeader: false });
+  const response = await fetch(request);
+  const observed = { type: response.type, status: response.status, bodyVisible: Boolean(response.body) };
+  const cache = await caches.open(MEDIA_CACHE);
+  await cache.put(request, response);
+  const hit = await cache.match(playbackUrl, { ignoreVary: true });
+  if (!hit) throw new Error("Cache verification failed for " + kind);
+  const elapsedMs = Math.round(performance.now() - startedAt);
+  log("cache-fetch-complete", { kind, itag: format.itag, expectedBytes, estimated: !format.contentLength && Boolean(expectedBytes), elapsedMs, observed, cacheHit: true });
+  return { kind, url: playbackUrl, format: publicFormat(format), expectedBytes, expectedBytesEstimated: !format.contentLength && Boolean(expectedBytes), elapsedMs, observed };
+}
+
+function openDb() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, 1);
+    request.onupgradeneeded = () => request.result.createObjectStore("manifests", { keyPath: "videoId" });
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+}
+
+async function saveManifest(manifest) {
+  const db = await openDb();
+  await new Promise((resolve, reject) => {
+    const transaction = db.transaction("manifests", "readwrite");
+    transaction.objectStore("manifests").put(manifest);
+    transaction.oncomplete = resolve;
+    transaction.onerror = () => reject(transaction.error);
+  });
+  db.close();
+}
+
+async function loadManifest(videoId) {
+  const db = await openDb();
+  const result = await new Promise((resolve, reject) => {
+    const request = db.transaction("manifests", "readonly").objectStore("manifests").get(videoId);
+    request.onsuccess = () => resolve(request.result || null);
+    request.onerror = () => reject(request.error);
+  });
+  db.close();
+  return result;
+}
+
+async function cacheSelected() {
+  if (!state.selected) throw new Error("Resolve a video first");
+  state.phase = "caching";
+  elements.cache.disabled = true;
+  elements.play.disabled = true;
+  setStatus("Downloading media directly from Googlevideo into this browser cache. No VPS/webhost media path is used...");
+  await swCommand({ type: "set-strict-offline", enabled: false });
+  const before = await storageEstimate();
+  const cache = await caches.open(MEDIA_CACHE);
+  const oldManifest = await loadManifest(state.selected.videoId);
+  if (oldManifest) {
+    if (oldManifest.video?.url) await cache.delete(oldManifest.video.url, { ignoreVary: true });
+    if (oldManifest.audio?.url) await cache.delete(oldManifest.audio.url, { ignoreVary: true });
+  }
+
+  const offlineFormat = state.selected.progressive;
+  if (!offlineFormat) throw new Error("No combined progressive fallback is available for automatic offline storage");
+  const video = await cacheFormat("progressive", offlineFormat, true);
+  const audio = null;
+  const after = await storageEstimate();
+  const manifest = {
+    videoId: state.selected.videoId,
+    title: state.selected.title,
+    author: state.selected.author,
+    createdAt: new Date().toISOString(),
+    video,
+    audio,
+    expectedBytes: video.expectedBytes + (audio?.expectedBytes || 0),
+    storageBefore: before,
+    storageAfter: after
+  };
+  await saveManifest(manifest);
+  state.manifest = manifest;
+  state.phase = "cached";
+  elements.play.disabled = false;
+  elements.cache.disabled = false;
+  const usageDelta = before && after ? Math.max(0, after.usage - before.usage) : 0;
+  setStatus("Cached locally as a combined " + (offlineFormat.qualityLabel || offlineFormat.height + "p") + " MP4 fallback; browser storage increased " + formatBytes(usageDelta) + ". Ready for strict cache-only playback.", "ok");
+  log("cache-complete", { expectedBytes: manifest.expectedBytes, usageDelta, manifestStoredIn: "IndexedDB", mediaStoredIn: "Cache Storage" });
+}
+
+function swCommand(payload) {
+  return new Promise((resolve, reject) => {
+    const controller = navigator.serviceWorker.controller;
+    if (!controller) { reject(new Error("Service Worker is not controlling this page")); return; }
+    const channel = new MessageChannel();
+    const timer = setTimeout(() => reject(new Error("Service Worker command timed out")), 4000);
+    channel.port1.onmessage = event => { clearTimeout(timer); resolve(event.data); };
+    controller.postMessage(payload, [channel.port2]);
+  });
+}
+
+function once(target, eventName, timeoutMs = 15000) {
+  return new Promise((resolve, reject) => {
+    if (target.readyState >= 1 && eventName === "loadedmetadata") { resolve(); return; }
+    const timer = setTimeout(() => { cleanup(); reject(new Error(eventName + " timed out")); }, timeoutMs);
+    const done = () => { cleanup(); resolve(); };
+    const failed = () => { cleanup(); reject(new Error(target.error?.message || eventName + " failed")); };
+    const cleanup = () => {
+      clearTimeout(timer);
+      target.removeEventListener(eventName, done);
+      target.removeEventListener("error", failed);
+    };
+    target.addEventListener(eventName, done, { once: true });
+    target.addEventListener("error", failed, { once: true });
+  });
+}
+
+let syncInstalled = false;
+function installSync() {
+  if (syncInstalled) return;
+  syncInstalled = true;
+  const video = elements.video;
+  const audio = elements.audio;
+  video.addEventListener("play", () => { if (audio.src && audio.paused) audio.play().catch(() => {}); });
+  video.addEventListener("pause", () => { if (!audio.paused) audio.pause(); });
+  video.addEventListener("seeking", () => { if (audio.src && Number.isFinite(video.currentTime)) audio.currentTime = video.currentTime; });
+  video.addEventListener("ratechange", () => { audio.playbackRate = video.playbackRate; });
+  video.addEventListener("timeupdate", () => {
+    if (audio.src && Number.isFinite(audio.currentTime) && Math.abs(audio.currentTime - video.currentTime) > 0.3) audio.currentTime = video.currentTime;
+  });
+}
+
+async function playSelectedOnline() {
+  if (!state.selected) throw new Error("Resolve a video first");
+  if (!state.selected.progressive) throw new Error("No combined MP4 is available for direct browser playback");
+  state.phase = "online-playing";
+  await swCommand({ type: "set-strict-offline", enabled: false });
+  const format = state.selected.progressive;
+
+  elements.video.pause();
+  elements.audio.pause();
+  elements.video.removeAttribute("crossorigin");
+  elements.audio.removeAttribute("crossorigin");
+  elements.video.muted = false;
+  elements.video.src = makeProgressiveCacheUrl(format);
+  elements.audio.removeAttribute("src");
+  elements.video.load();
+
+  const metadataPromises = [once(elements.video, "loadedmetadata")];
+  const playPromises = [elements.video.play()];
+  const playResults = await Promise.allSettled(playPromises);
+  await Promise.all(metadataPromises);
+  await new Promise(resolve => setTimeout(resolve, 1400));
+
+  const ok = elements.video.readyState >= 2 && elements.video.currentTime > 0 && !elements.video.error;
+  const result = {
+    ok,
+    quality: format.qualityLabel || format.height + "p",
+    videoItag: format.itag,
+    audioItag: format.itag,
+    videoReadyState: elements.video.readyState,
+    videoCurrentTime: elements.video.currentTime,
+    audioReadyState: null,
+    audioCurrentTime: null,
+    drift: 0,
+    playResults: playResults.map(item => item.status)
+  };
+  state.phase = ok ? "online-playback-pass" : "online-playback-fail";
+  log("online-playback-result", result);
+  setStatus(ok ? "PASS: combined " + result.quality + " MP4 is streaming directly from Googlevideo with audio." : "FAIL: the combined direct MP4 did not reach playable state.", ok ? "ok" : "bad");
+}
+
+async function playCacheOnly() {
+  const videoId = state.selected?.videoId || extractVideoId(elements.input.value) || DEFAULT_VIDEO_ID;
+  const manifest = state.manifest || await loadManifest(videoId);
+  if (!manifest) throw new Error("No local manifest exists for this video");
+  state.manifest = manifest;
+  state.phase = "playing-cache-only";
+  await swCommand({ type: "set-strict-offline", enabled: true });
+  log("strict-offline-enabled", { enabled: true });
+  installSync();
+
+  elements.video.pause();
+  elements.audio.pause();
+  elements.video.removeAttribute("crossorigin");
+  elements.audio.removeAttribute("crossorigin");
+  elements.video.muted = Boolean(manifest.audio);
+  elements.video.src = manifest.video.url;
+  if (manifest.audio) elements.audio.src = manifest.audio.url;
+  else elements.audio.removeAttribute("src");
+  elements.video.load();
+  if (manifest.audio) elements.audio.load();
+
+  const metadataPromises = [once(elements.video, "loadedmetadata")];
+  if (manifest.audio) metadataPromises.push(once(elements.audio, "loadedmetadata"));
+  const playPromises = [elements.video.play()];
+  if (manifest.audio) playPromises.push(elements.audio.play());
+  const playResults = await Promise.allSettled(playPromises);
+  await Promise.all(metadataPromises);
+  await new Promise(resolve => setTimeout(resolve, 1200));
+
+  const snapshot = {
+    videoReadyState: elements.video.readyState,
+    videoNetworkState: elements.video.networkState,
+    videoDuration: elements.video.duration,
+    videoCurrentTime: elements.video.currentTime,
+    videoError: elements.video.error ? { code: elements.video.error.code, message: elements.video.error.message } : null,
+    audioReadyState: manifest.audio ? elements.audio.readyState : null,
+    audioCurrentTime: manifest.audio ? elements.audio.currentTime : null,
+    playResults: playResults.map(result => result.status)
+  };
+  const mediaCache = await caches.open(MEDIA_CACHE);
+  const cachedVideo = await mediaCache.match(manifest.video.url, { ignoreVary: true });
+  const cachedAudio = manifest.audio ? await mediaCache.match(manifest.audio.url, { ignoreVary: true }) : true;
+  const cacheVerified = Boolean(cachedVideo && cachedAudio);
+  const blockedMiss = state.events.some(event => event.type === "service-worker" && event.source === "blocked-network-miss");
+  const cacheHits = state.events.filter(event => event.type === "service-worker" && event.source === "cache-hit").length;
+  const ok = elements.video.readyState >= 2 && elements.video.currentTime > 0 && !elements.video.error && cacheVerified && !blockedMiss;
+  state.phase = ok ? "cache-playback-pass" : "cache-playback-fail";
+  log("cache-playback-result", { ok, cacheHits, cacheVerified, blockedMiss, ...snapshot });
+  setStatus(ok ? "PASS: media is playing while the Service Worker blocks every Googlevideo network miss. Bytes came from this browser cache." : "FAIL: cache-only playback did not produce verified media frames. Inspect the evidence log.", ok ? "ok" : "bad");
+}
+
+async function clearTestData() {
+  elements.video.pause();
+  elements.audio.pause();
+  elements.video.removeAttribute("src");
+  elements.audio.removeAttribute("src");
+  elements.video.load();
+  elements.audio.load();
+  await swCommand({ type: "set-strict-offline", enabled: false }).catch(() => {});
+  await caches.delete(MEDIA_CACHE);
+  await new Promise(resolve => {
+    const request = indexedDB.deleteDatabase(DB_NAME);
+    request.onsuccess = request.onerror = request.onblocked = resolve;
+  });
+  state.manifest = null;
+  state.phase = "cleared";
+  state.events = [];
+  elements.play.disabled = true;
+  elements.log.textContent = "No events yet.";
+  setStatus("Test cache and IndexedDB metadata cleared.", "ok");
+}
+
+async function ensureServiceWorker() {
+  if (!("serviceWorker" in navigator) || !("caches" in window) || !("indexedDB" in window)) {
+    throw new Error("Required PWA storage APIs are unavailable");
+  }
+  await navigator.serviceWorker.register("./sw.js?v=12", { scope: "./" });
+  await navigator.serviceWorker.ready;
+  if (!navigator.serviceWorker.controller) {
+    await new Promise(resolve => navigator.serviceWorker.addEventListener("controllerchange", resolve, { once: true }));
+  }
+  navigator.serviceWorker.addEventListener("message", event => {
+    if (event.data?.type !== "vbs-media-request") return;
+    log("service-worker", event.data);
+  });
+  const swStatus = await swCommand({ type: "status" });
+  log("service-worker-ready", swStatus);
+  state.phase = "ready";
+}
+
+function runAction(action, phase) {
+  return async event => {
+    event?.preventDefault();
+    try {
+      await action();
+    } catch (error) {
+      state.phase = phase + "-error";
+      state.lastError = error.message;
+      log(phase + "-error", { error: error.message, stack: error.stack || "" });
+      setStatus(error.message, "bad");
+      if (phase === "cache") elements.cache.disabled = false;
+    }
+  };
+}
+
+elements.resolve.addEventListener("click", runAction(resolveInBrowser, "resolve"));
+elements.stream.addEventListener("click", runAction(playSelectedOnline, "stream"));
+elements.cache.addEventListener("click", runAction(cacheSelected, "cache"));
+elements.play.addEventListener("click", runAction(playCacheOnly, "play"));
+elements.clear.addEventListener("click", runAction(clearTestData, "clear"));
+elements.nativeDownload.addEventListener("click", event => {
+  if (elements.nativeDownload.getAttribute("aria-disabled") === "true") event.preventDefault();
+  else log("native-download-start", { directToBrowser: true, urlHost: state.downloadTarget ? new URL(state.downloadTarget.directUrl).hostname : "" });
+});
+
+ensureServiceWorker().then(async () => {
+  const existing = await loadManifest(extractVideoId(elements.input.value) || DEFAULT_VIDEO_ID);
+  if (existing) {
+    state.manifest = existing;
+    elements.play.disabled = false;
+    setStatus("Ready. Existing local cache manifest found.", "ok");
+  } else {
+    setStatus("Ready. Resolve a video to begin.", "ok");
+  }
+}).catch(error => {
+  state.phase = "boot-error";
+  state.lastError = error.message;
+  setStatus(error.message, "bad");
+  log("boot-error", { error: error.message });
+});
+</script>
+</body>
+</html>

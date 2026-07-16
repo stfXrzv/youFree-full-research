@@ -1,0 +1,322 @@
+{
+  "video": "https://www.youtube.com/watch?v=MryMoDHHf7c",
+  "variants": [
+    {
+      "name": "base-no-title",
+      "titleLength": 0,
+      "queryRange": "",
+      "hasTitle": false,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-short",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-48",
+      "titleLength": 48,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-64",
+      "titleLength": 64,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-80",
+      "titleLength": 80,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-full",
+      "titleLength": 94,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-cnr",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 403,
+        "type": "text/plain",
+        "disposition": "",
+        "length": "0",
+        "range": ""
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-xtags",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 403,
+        "type": "text/plain",
+        "disposition": "",
+        "length": "0",
+        "range": ""
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-cnr-xtags",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 403,
+        "type": "text/plain",
+        "disposition": "",
+        "length": "0",
+        "range": ""
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-player-tail",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-download",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-response-disposition",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-content-disposition",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906"
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-redirector",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906",
+        "redirects": 1
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    },
+    {
+      "name": "title-youtube-host",
+      "titleLength": 15,
+      "queryRange": "",
+      "hasTitle": true,
+      "headers": {
+        "status": 206,
+        "type": "video/mp4",
+        "disposition": "",
+        "length": "1",
+        "range": "bytes 0-0/23274906",
+        "redirects": 1
+      },
+      "chromeResponses": [],
+      "download": null,
+      "failure": "",
+      "finalPageHost": "localhost"
+    }
+  ],
+  "title": "HUGEL x Topic x Arash feat. Andrw Flamez | LIBERATION REMIX- (2026 Summer Afro House) AFRO HOUSE",
+  "urlShape": {
+    "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+    "keys": [
+      "bui",
+      "c",
+      "clen",
+      "cps",
+      "dur",
+      "ei",
+      "expire",
+      "fexp",
+      "fvip",
+      "gir",
+      "id",
+      "initcwndbps",
+      "ip",
+      "itag",
+      "lmt",
+      "lsig",
+      "lsparams",
+      "met",
+      "mh",
+      "mime",
+      "mm",
+      "mn",
+      "ms",
+      "mt",
+      "mv",
+      "mvi",
+      "pl",
+      "range",
+      "ratebypass",
+      "requiressl",
+      "rms",
+      "rqh",
+      "sig",
+      "source",
+      "sparams",
+      "spc",
+      "svpuc",
+      "title",
+      "txp",
+      "vprv",
+      "xpc"
+    ],
+    "client": "ANDROID",
+    "source": "youtube",
+    "itag": "18",
+    "mime": "video/mp4",
+    "requiresSsl": "yes",
+    "rqh": "1",
+    "gir": "yes",
+    "cnr": "",
+    "xtags": "",
+    "vprv": "1",
+    "svpuc": "1",
+    "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,ratebypass,dur,lmt",
+    "lsparams": "cps,met,mh,mm,mn,ms,mv,mvi,pl,rms,initcwndbps"
+  }
+}

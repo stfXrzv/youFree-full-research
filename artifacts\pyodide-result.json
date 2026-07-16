@@ -1,0 +1,111 @@
+{
+  "id": "inspect-1",
+  "ok": true,
+  "result": {
+    "ok": true,
+    "id": "A9-t86OAtM0",
+    "title": "Just Lose It (Director's Cut) by Eminem | Eminem",
+    "duration": 246,
+    "formatCount": 24,
+    "directCount": 24,
+    "maxHeight": 1080,
+    "hasAudio": true,
+    "itags": [
+      "133",
+      "134",
+      "135",
+      "139",
+      "140",
+      "160",
+      "242",
+      "243",
+      "244",
+      "247-sr",
+      "248-sr",
+      "249",
+      "250",
+      "251",
+      "278",
+      "394",
+      "395",
+      "396",
+      "397",
+      "398-sr",
+      "399-sr",
+      "sb0",
+      "sb1",
+      "sb2"
+    ],
+    "trace": [
+      {
+        "configuration": {
+          "player_client": [
+            "ios"
+          ],
+          "player_skip": [
+            "webpage",
+            "configs",
+            "js",
+            "initial_data"
+          ],
+          "webpage_skip": [
+            "initial_data"
+          ]
+        }
+      },
+      {
+        "method": "POST",
+        "original": {
+          "host": "www.youtube.com",
+          "path": "/youtubei/v1/player",
+          "queryKeys": [
+            "prettyPrint"
+          ]
+        },
+        "target": {
+          "host": "release-youtubei.sandbox.googleapis.com",
+          "path": "/youtubei/v1/player",
+          "queryKeys": [
+            "prettyPrint"
+          ]
+        },
+        "headerNames": [
+          "accept",
+          "accept-language",
+          "content-type"
+        ],
+        "bodyShape": {
+          "topKeys": [
+            "contentCheckOk",
+            "context",
+            "playbackContext",
+            "racyCheckOk",
+            "videoId"
+          ],
+          "clientName": "IOS",
+          "clientVersion": "21.02.3",
+          "clientKeys": [
+            "clientName",
+            "clientVersion",
+            "deviceMake",
+            "deviceModel",
+            "hl",
+            "osName",
+            "osVersion",
+            "timeZone",
+            "userAgent",
+            "utcOffsetMinutes"
+          ],
+          "playbackKeys": [
+            "html5Preference",
+            "lactMilliseconds"
+          ],
+          "hasVisitorData": false,
+          "hasPoToken": false
+        },
+        "result": "response",
+        "status": 200
+      }
+    ]
+  }
+}

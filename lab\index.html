@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>VibeStream Gate A Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong>VibeStream</strong>
+      <span>Browser Resolver Lab</span>
+    </div>
+    <output id="network-state">No media relay</output>
+  </header>
+
+  <main>
+    <section class="controls" aria-labelledby="probe-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Phase 0 / Phase 1</p>
+          <h1 id="probe-title">Gate A transport matrix</h1>
+        </div>
+        <div class="constraint">User IP · Worker · credentials omit</div>
+      </div>
+
+      <form id="probe-form">
+        <label class="url-field" for="video-url">
+          <span>YouTube URL or video ID</span>
+          <input id="video-url" name="video-url" value="https://www.youtube.com/watch?v=A9-t86OAtM0" autocomplete="off" spellcheck="false">
+        </label>
+
+        <fieldset>
+          <legend>Client profiles</legend>
+          <div id="client-list" class="client-list"></div>
+        </fieldset>
+
+        <div class="actions">
+          <button id="run-probe" class="primary" type="submit">Run matrix</button>
+          <button id="cancel-probe" type="button">Cancel</button>
+          <button id="export-report" type="button">Export redacted JSON</button>
+          <button id="clear-report" type="button">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="verdict-band" aria-live="polite">
+      <div>
+        <span>Gate A</span>
+        <strong id="gate-verdict" data-status="idle">NOT RUN</strong>
+      </div>
+      <p id="gate-reason">No gate is claimed until a reproducible probe completes.</p>
+    </section>
+
+    <section aria-labelledby="matrix-title">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Observable evidence</p>
+          <h2 id="matrix-title">Client matrix</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Result</th>
+              <th>HTTP</th>
+              <th>Direct</th>
+              <th>Cipher</th>
+              <th>Best</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="log-title">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Secret-safe recorder</p>
+          <h2 id="log-title">Event log</h2>
+        </div>
+      </div>
+      <pre id="event-log" tabindex="0">[]</pre>
+    </section>
+  </main>
+
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

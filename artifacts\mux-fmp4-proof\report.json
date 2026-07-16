@@ -1,0 +1,25 @@
+{
+  "schema": "vibestream-fmp4-mux-proof-v1",
+  "recordedAt": "2026-07-16T18:34:42.212Z",
+  "input": {
+    "videoBytes": 404392,
+    "audioBytes": 37393
+  },
+  "output": {
+    "bytes": 441303,
+    "duration": 4.066667,
+    "streams": [
+      {
+        "index": 0,
+        "type": "video",
+        "codec": "h264"
+      },
+      {
+        "index": 1,
+        "type": "audio",
+        "codec": "aac"
+      }
+    ]
+  },
+  "pass": true
+}

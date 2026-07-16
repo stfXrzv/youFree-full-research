@@ -1,0 +1,2100 @@
+{
+  "videoId": "MryMoDHHf7c",
+  "createdAt": "2026-07-14T16:58:45.347Z",
+  "liveConfig": {
+    "clientVersion": "2.20260710.06.00",
+    "hasVisitorData": true,
+    "hasApiKey": true,
+    "sts": 20646,
+    "hasPlayerJs": true
+  },
+  "clients": [
+    {
+      "label": "android",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "offlineability": {
+          "buttonRenderer": {
+            "serviceEndpoint": {
+              "clickTrackingParams": "CAwQ6ewBIhMI-tzS9dHSlQMVPOjjBx2bTh1tygEEJi7pUA==",
+              "ypcGetOfflineUpsellEndpoint": {
+                "params": "ChPqqN25AQ0KC01yeU1vREhIZjdjIgtNcnlNb0RISGY3YyoVCAkYAVIPCgtNcnlNb0RISGY3YyAB"
+              }
+            },
+            "trackingParams": "CAwQ6ewBIhMI-tzS9dHSlQMVPOjjBx2bTh1t"
+          }
+        },
+        "pictureInPicture": {
+          "pictureInPictureRenderer": {
+            "playableInPip": true,
+            "pictureInPictureStyleConfig": {
+              "enableScrubbing": true,
+              "enableNavigationControls": true
+            },
+            "pictureInPicturePlayability": "PICTURE_IN_PICTURE_PLAYABILITY_ALL"
+          }
+        },
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW",
+            "enableStashedPlayback": false
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "formats",
+        "adaptiveFormats",
+        "serverAbrStreamingUrl",
+        "metadataFormats"
+      ],
+      "formats": [
+        {
+          "itag": 18,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 23274906,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "ANDROID",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,ratebypass,dur,lmt"
+          }
+        }
+      ],
+      "adaptiveFormats": [
+        {
+          "itag": 137,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 91064067,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 248,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 34722295,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 399,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 38242966,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 136,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 27094796,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 247,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 21530587,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 398,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 22996647,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 135,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 14532405,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 244,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 12069356,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 397,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 13377459,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 134,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401e\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 9476099,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 243,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8085763,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 396,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8111511,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 133,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"avc1.4d4015\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 5099259,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 242,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3613800,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 395,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 4035027,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 160,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"avc1.4d400c\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3024442,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 278,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2013350,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 394,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2549983,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 598,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 734964,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 139,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.5\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1614375,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 140,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4282178,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 249,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1738965,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 251,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4425241,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 599,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.5\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1018992,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 600,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1197074,
+          "host": "",
+          "urlShape": null
+        }
+      ],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": true
+    },
+    {
+      "label": "android_vr",
+      "httpStatus": 200,
+      "playability": {
+        "status": "LOGIN_REQUIRED",
+        "reason": "Sign in to confirm you’re not a bot",
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [],
+      "formats": [],
+      "adaptiveFormats": [],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": false
+    },
+    {
+      "label": "ios",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "offlineability": {
+          "buttonRenderer": {
+            "navigationEndpoint": {
+              "clickTrackingParams": "CBEQ6ewBIhMIzuyV9tHSlQMVj_yUCR2SbxbUygEEtuCAzg==",
+              "ypcGetOfflineUpsellEndpoint": {
+                "params": "ChPqqN25AQ0KC01yeU1vREhIZjdjIgtNcnlNb0RISGY3YyoVCAkYAVIPCgtNcnlNb0RISGY3YyAB"
+              }
+            },
+            "trackingParams": "CBEQ6ewBIhMIzuyV9tHSlQMVj_yUCR2SbxbU"
+          }
+        },
+        "pictureInPicture": {
+          "pictureInPictureRenderer": {
+            "playableInPip": true,
+            "offByDefault": false,
+            "shouldResumeOnHead": false,
+            "pictureInPicturePlayability": "PICTURE_IN_PICTURE_PLAYABILITY_ALL"
+          }
+        },
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW",
+            "enableStashedPlayback": false
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "adaptiveFormats",
+        "aspectRatio",
+        "serverAbrStreamingUrl",
+        "metadataFormats"
+      ],
+      "formats": [],
+      "adaptiveFormats": [
+        {
+          "itag": 137,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 91064067,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 248,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/webm; codecs=\"vp09.00.40.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 34722295,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 399,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 38242966,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 136,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"avc1.4D401F\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 27094796,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 247,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/webm; codecs=\"vp09.00.31.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 21530587,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 398,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 22996647,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 135,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"avc1.4D401F\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 14532405,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 244,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/webm; codecs=\"vp09.00.30.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 12069356,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 397,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 13377459,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 134,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.4D401E\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 9476099,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 243,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/webm; codecs=\"vp09.00.21.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8085763,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 396,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8111511,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 133,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"avc1.4D4015\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 5099259,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 242,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/webm; codecs=\"vp09.00.20.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3613800,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 395,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 4035027,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 160,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"avc1.4D400C\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3024442,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 278,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp09.00.11.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2013350,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 394,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2549983,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 139,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.5\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1614375,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 140,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4282178,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 249,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1738965,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 250,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 2277166,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 251,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4425241,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "IOS",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,rqh,gir,clen,dur,lmt"
+          }
+        }
+      ],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": true
+    },
+    {
+      "label": "web",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "adaptiveFormats",
+        "serverAbrStreamingUrl"
+      ],
+      "formats": [],
+      "adaptiveFormats": [
+        {
+          "itag": 137,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 91064067,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 248,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 34722295,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 399,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 38242966,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 136,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 27094796,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 247,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 21530587,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 398,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 22996647,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 135,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 14532405,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 244,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 12069356,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 397,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 13377459,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 134,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401e\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 9476099,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 243,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8085763,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 396,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8111511,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 133,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"avc1.4d4015\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 5099259,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 242,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3613800,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 395,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 4035027,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 160,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"avc1.4d400c\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3024442,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 278,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2013350,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 394,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2549983,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 140,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4282178,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 249,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1738965,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 250,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 2277166,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 251,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4425241,
+          "host": "",
+          "urlShape": null
+        }
+      ],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": true
+    },
+    {
+      "label": "web_safari",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "miniplayer": {
+          "miniplayerRenderer": {
+            "playbackMode": "PLAYBACK_MODE_ALLOW"
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "adaptiveFormats",
+        "serverAbrStreamingUrl"
+      ],
+      "formats": [],
+      "adaptiveFormats": [
+        {
+          "itag": 137,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 91064067,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 248,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 34722295,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 399,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 38242966,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 136,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 27094796,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 247,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 21530587,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 398,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 22996647,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 135,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 14532405,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 244,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 12069356,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 397,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 13377459,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 134,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401e\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 9476099,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 243,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8085763,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 396,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8111511,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 133,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"avc1.4d4015\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 5099259,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 242,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3613800,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 395,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 4035027,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 160,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"avc1.4d400c\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3024442,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 278,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2013350,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 394,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2549983,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 140,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4282178,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 249,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1738965,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 250,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 2277166,
+          "host": "",
+          "urlShape": null
+        },
+        {
+          "itag": 251,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": false,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4425241,
+          "host": "",
+          "urlShape": null
+        }
+      ],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": true
+    },
+    {
+      "label": "web_embedded",
+      "httpStatus": 200,
+      "playability": {
+        "status": "ERROR",
+        "reason": "This video is unavailable",
+        "errorScreen": {
+          "playerErrorMessageRenderer": {
+            "subreason": {
+              "runs": [
+                {
+                  "text": "Error code: 152 - 18"
+                },
+                {
+                  "text": "\n"
+                },
+                {
+                  "text": "<a href='https://www.youtube.com/watch?v=MryMoDHHf7c&source_ve_path=MTc4NDI0' target='_blank'>Watch video on YouTube</a>"
+                }
+              ]
+            },
+            "reason": {
+              "runs": [
+                {
+                  "text": "This video is unavailable"
+                }
+              ]
+            }
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I=",
+        "errorCode": "PLAYABILITY_ERROR_CODE_EMBEDDER_IDENTITY_DENIED"
+      },
+      "streamingKeys": [],
+      "formats": [],
+      "adaptiveFormats": [],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": false
+    },
+    {
+      "label": "mweb",
+      "httpStatus": 200,
+      "playability": {
+        "status": "OK",
+        "playableInEmbed": true,
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [
+        "expiresInSeconds",
+        "formats",
+        "adaptiveFormats",
+        "serverAbrStreamingUrl"
+      ],
+      "formats": [
+        {
+          "itag": 18,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 23274906,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,ratebypass,dur,lmt"
+          }
+        }
+      ],
+      "adaptiveFormats": [
+        {
+          "itag": 137,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 91064067,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 248,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 34722295,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 399,
+          "qualityLabel": "1080p",
+          "height": 1080,
+          "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 38242966,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 136,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 27094796,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 247,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 21530587,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 398,
+          "qualityLabel": "720p",
+          "height": 720,
+          "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 22996647,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 135,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401f\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 14532405,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 244,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 12069356,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 397,
+          "qualityLabel": "480p",
+          "height": 480,
+          "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 13377459,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 134,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"avc1.4d401e\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 9476099,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 243,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8085763,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 396,
+          "qualityLabel": "360p",
+          "height": 360,
+          "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 8111511,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 133,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"avc1.4d4015\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 5099259,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 242,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3613800,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 395,
+          "qualityLabel": "240p",
+          "height": 240,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 4035027,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 160,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"avc1.4d400c\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 3024442,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 278,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2013350,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 394,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 2549983,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 598,
+          "qualityLabel": "144p",
+          "height": 144,
+          "mimeType": "video/webm; codecs=\"vp9\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": false,
+          "contentLength": 734964,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,aitags,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 140,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4282178,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 249,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1738965,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 250,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 2277166,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 251,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 4425241,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 599,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/mp4; codecs=\"mp4a.40.5\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1018992,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        },
+        {
+          "itag": 600,
+          "qualityLabel": "",
+          "height": 0,
+          "mimeType": "audio/webm; codecs=\"opus\"",
+          "hasUrl": true,
+          "hasCipher": false,
+          "hasAudio": true,
+          "contentLength": 1197074,
+          "host": "rr6---sn-8pgbpohxqp5-aigez.googlevideo.com",
+          "urlShape": {
+            "client": "MWEB",
+            "gir": "yes",
+            "clen": true,
+            "cnr": false,
+            "xtags": false,
+            "sparams": "expire,ei,ip,id,itag,source,requiressl,xpc,bui,spc,vprv,svpuc,mime,ns,rqh,gir,clen,dur,lmt"
+          }
+        }
+      ],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": true
+    },
+    {
+      "label": "tv",
+      "httpStatus": 200,
+      "playability": {
+        "status": "LOGIN_REQUIRED",
+        "reason": "Sign in to confirm you’re not a bot",
+        "errorScreen": {
+          "playerErrorCommandRenderer": {
+            "command": {
+              "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+              "authRequiredCommand": {
+                "identityActionContext": {
+                  "eventTrigger": "ACCOUNT_EVENT_TRIGGER_VISITOR_SUSPICIOUS_REQUEST",
+                  "nextEndpoint": {
+                    "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+                    "commandExecutorCommand": {
+                      "commands": [
+                        {
+                          "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+                          "signalAction": {
+                            "signal": "CLOSE_POPUP"
+                          }
+                        },
+                        {
+                          "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+                          "signalAction": {
+                            "signal": "RELOAD_PLAYER"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "dismissalCommand": {
+                  "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+                  "commandExecutorCommand": {
+                    "commands": [
+                      {
+                        "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+                        "signalAction": {
+                          "signal": "HISTORY_BACK"
+                        }
+                      },
+                      {
+                        "clickTrackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA",
+                        "signalAction": {
+                          "signal": "CLOSE_POPUP"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "trackingParams": "CAAQu2kiEwjT4p330dKVAxVtZ50GHfBLAQ3KAQTlBqMA"
+          }
+        },
+        "skip": {
+          "playabilityErrorSkipConfig": {
+            "skipOnPlayabilityError": false
+          }
+        },
+        "contextParams": "Q0FFU0FnZ0I="
+      },
+      "streamingKeys": [],
+      "formats": [],
+      "adaptiveFormats": [],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": false
+    },
+    {
+      "label": "tv_simply",
+      "httpStatus": 200,
+      "playability": {
+        "status": "UNPLAYABLE",
+        "reason": "Sign in to confirm you’re not a bot"
+      },
+      "streamingKeys": [],
+      "formats": [],
+      "adaptiveFormats": [],
+      "hlsManifestUrl": null,
+      "dashManifestUrl": null,
+      "serverAbr": false
+    }
+  ]
+}

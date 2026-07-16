@@ -1,0 +1,23 @@
+{
+  "video": "https://www.youtube.com/watch?v=A9-t86OAtM0",
+  "createdAt": "2026-07-16T18:34:06.987Z",
+  "variants": [
+    {
+      "label": "cross-origin-cache",
+      "error": "Error: page.evaluate: SecurityError: Failed to execute 'captureStream' on 'HTMLMediaElement': Cannot capture from element with cross-origin data\n    at eval (eval at evaluate (:302:30), <anonymous>:35:28)\n    at async <anonymous>:328:30"
+    },
+    {
+      "label": "same-origin-alias",
+      "error": "Error: page.evaluate: SecurityError: Failed to execute 'captureStream' on 'HTMLMediaElement': Cannot capture from element with cross-origin data\n    at eval (eval at evaluate (:302:30), <anonymous>:35:28)\n    at async <anonymous>:328:30"
+    }
+  ],
+  "manifest": {
+    "videoId": "A9-t86OAtM0",
+    "expectedBytes": 11461305,
+    "opaque": true
+  },
+  "aliasRegistration": {
+    "ok": true,
+    "id": "A9-t86OAtM0-capture"
+  }
+}

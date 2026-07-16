@@ -1,0 +1,5 @@
+{"id":"D-0001","date":"2026-07-15","status":"accepted","decision":"Treat URL resolution and readable media-byte acquisition as independent gates.","source":"common-plan-v1"}
+{"id":"D-0002","date":"2026-07-15","status":"accepted","decision":"Test JavaScript Worker transport before building a Pyodide mini-wheel.","source":"common-plan-v1"}
+{"id":"D-0003","date":"2026-07-15","status":"accepted","decision":"Never commit cookies, OAuth data, secrets, signed media URLs, or private raw traces.","source":"repository-bootstrap"}
+{"id":"D-0004","date":"2026-07-16","status":"accepted","decision":"Under the browser-only constraints, ship direct progressive streaming and opaque-cache offline playback as the reliable path; expose native file download only when attachment behavior is positively detected.","source":"gate-d-evidence"}
+{"id":"D-0005","date":"2026-07-16","status":"accepted","decision":"Do not claim universal 1080p download or mux until Googlevideo media becomes readable to JavaScript. Gate D remains failed overall because D2 failed even though D3 passed with readable fixtures.","source":"gate-d-evidence"}
