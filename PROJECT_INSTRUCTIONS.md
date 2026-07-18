@@ -32,3 +32,11 @@ Rules:
 - Do not claim a gate passed without reproducible evidence.
 - Never store cookies, OAuth credentials, API secrets, signed media URLs, or raw private traces in this repository.
 - Do not edit the same mutable file concurrently. Use the ownership boundaries in `README.md`.
+
+## Closed milestone
+
+The current browser resolver milestone is closed as `resolved / not possible`
+under the strict constraints. Before any related future task, read
+`AI_BRIDGE/CLOSED_SUMMARY_V1.md` and `AI_BRIDGE/STATUS_CODEX.md`. Do not reopen
+or repeat the experiments unless the user explicitly requests it or changes the
+constraints.
