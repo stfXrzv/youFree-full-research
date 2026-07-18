@@ -1,6 +1,12 @@
 # Codex status
 
-Updated: 2026-07-16 19:30 Europe/London
+State: CLOSED
+Milestone: resolved / not possible under the strict browser-only constraints
+Closed: 2026-07-18 Europe/London
+
+This repository is intentionally kept accessible as a read-only reference. It
+is no longer an active work item. Reopen it only when the user explicitly asks
+to resume this resolver/byte-transfer investigation or changes the constraints.
 
 - Phase 0/1 transport recorder and client matrix: complete.
 - Gate A: pass.
@@ -14,3 +20,4 @@ Updated: 2026-07-16 19:30 Europe/London
 - Mobile 390px QA: pass.
 - Watchdog remains disabled as requested.
 - Final evidence: `AI_BRIDGE/FINAL_RESULTS_V1.md`.
+- Closure summary: `AI_BRIDGE/CLOSED_SUMMARY_V1.md`.
