@@ -78,20 +78,20 @@ try {
   const cleanTitle = resolved.title.replace(/[\\/:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim();
   const candidates = [
     ["base-no-title", "", {}],
-    ["title-short", "VibeStream Test", {}],
+    ["title-short", "freePlay Test", {}],
     ["title-48", cleanTitle.slice(0, 48).trim(), {}],
     ["title-64", cleanTitle.slice(0, 64).trim(), {}],
     ["title-80", cleanTitle.slice(0, 80).trim(), {}],
     ["title-full", cleanTitle, {}],
-    ["title-cnr", "VibeStream Test", { cnr: "14" }],
-    ["title-xtags", "VibeStream Test", { xtags: "heaudio=true" }],
-    ["title-cnr-xtags", "VibeStream Test", { cnr: "14", xtags: "heaudio=true" }],
-    ["title-player-tail", "VibeStream Test", { alr: "yes", cpn: "VBSCLIENTTEST1", rn: "1", rbuf: "0" }],
-    ["title-download", "VibeStream Test", { download: "1" }],
-    ["title-response-disposition", "VibeStream Test", { "response-content-disposition": "attachment; filename=VibeStream.mp4" }],
-    ["title-content-disposition", "VibeStream Test", { "content-disposition": "attachment" }],
-    ["title-redirector", "VibeStream Test", { $host: "redirector.googlevideo.com" }],
-    ["title-youtube-host", "VibeStream Test", { $host: "www.youtube.com" }]
+    ["title-cnr", "freePlay Test", { cnr: "14" }],
+    ["title-xtags", "freePlay Test", { xtags: "heaudio=true" }],
+    ["title-cnr-xtags", "freePlay Test", { cnr: "14", xtags: "heaudio=true" }],
+    ["title-player-tail", "freePlay Test", { alr: "yes", cpn: "VBSCLIENTTEST1", rn: "1", rbuf: "0" }],
+    ["title-download", "freePlay Test", { download: "1" }],
+    ["title-response-disposition", "freePlay Test", { "response-content-disposition": "attachment; filename=freePlay.mp4" }],
+    ["title-content-disposition", "freePlay Test", { "content-disposition": "attachment" }],
+    ["title-redirector", "freePlay Test", { $host: "redirector.googlevideo.com" }],
+    ["title-youtube-host", "freePlay Test", { $host: "www.youtube.com" }]
   ];
 
   for (const [name, candidateTitle, additions] of candidates) {
@@ -163,3 +163,4 @@ try {
 
 await writeFile(path.join(ARTIFACTS, "native-download-probe.json"), JSON.stringify(result, null, 2));
 console.log(JSON.stringify(result, null, 2));
+
