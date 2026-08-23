@@ -1,5 +1,5 @@
 {
-  "name": "vibestream-browser-resolver-lab",
+  "name": "freeplay-browser-resolver-lab",
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,3 +16,4 @@
     "test:mux:fmp4": "node tests/run-fmp4-proof.mjs"
   }
 }
+
