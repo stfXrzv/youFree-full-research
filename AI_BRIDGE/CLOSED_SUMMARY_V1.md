@@ -14,7 +14,7 @@ mux it locally.
 ## Final result
 
 - Browser transport and local resolver: working.
-- Pyodide plus the custom `pyxhr` yt-dlp path: working for the measured case.
+- Pyodide plus the custom `pyxhr` yt-dlp path: working for the measured `geturl`/URL-resolution case only; it did not download media bytes in the browser.
 - Direct progressive streaming: working with the user's traffic.
 - 1080p/1440p URLs: resolvable/probeable in finite ranges, but native adaptive
   playback has an open-range 403 limitation.
