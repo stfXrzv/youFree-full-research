@@ -2,7 +2,7 @@
 
 Date: 2026-07-18 Europe/London
 
-The VibeStream browser resolver milestone is closed as:
+The freePlay browser resolver milestone is closed as:
 
 `resolved / not possible under the strict browser-only constraints`
 
@@ -16,3 +16,4 @@ the constraints and reopen the milestone.
 Read `AI_BRIDGE/CLOSED_SUMMARY_V1.md` before proposing any related work. Do not
 start new experiments automatically. This handoff contains no credentials,
 cookies, signed URLs, or private traces.
+
