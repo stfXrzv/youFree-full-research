@@ -16,7 +16,7 @@ Constraints tested:
 | Gate | Result | Evidence |
 | --- | --- | --- |
 | A: browser transport | PASS | Player API is CORS-readable. Android exposes progressive 360p; iOS exposes direct adaptive formats up to 1080p plus audio. |
-| B: Pyodide yt-dlp | PASS | Pyodide/pyxhr extraction matches desktop yt-dlp exactly for title, duration, 24 direct formats and itags. |
+| B: Pyodide yt-dlp | PASS FOR GETURL ONLY | Pyodide/pyxhr URL extraction matches desktop yt-dlp exactly for title, duration, 24 direct formats and itags; it does not download media bytes into the browser. |
 | C: local resolver | PASS WITH PLAYBACK LIMIT | Finite 1080p video/audio probes return 206 and automatic re-resolve recovers from an expired URL. Native adaptive playback fails because Chrome requests `Range: bytes=0-` and Googlevideo returns 403. |
 | D1: native file download | PARTIAL | A valid MP4 downloaded directly for some assets. Other assets remain inline and cannot be forced into attachment behavior. |
 | D2: automatic byte access | FAIL | Opaque response converts to zero-byte Blob/ArrayBuffer and writes zero bytes to OPFS. Background Fetch and captureStream also fail. |
@@ -26,8 +26,8 @@ Gate D is failed overall because D2 is mandatory for automatic adaptive download
 
 ## What works now
 
-1. Resolve YouTube metadata and direct URLs on the user's own IP in a JavaScript Worker.
-2. Run yt-dlp in Pyodide through the custom pyxhr handler as a browser-side fallback.
+1. Resolve YouTube metadata and direct URLs on the user's own IP in a JavaScript Worker; this is the `geturl`/resolver result, not a browser-side yt-dlp download.
+2. Run the Pyodide/pyxhr path only as a browser-side `geturl`/URL-resolution fallback.
 3. Detect 1080p adaptive video and separate audio and refresh rejected/expired URLs automatically.
 4. Stream a combined progressive MP4 directly from Googlevideo with audio.
 5. Save the combined progressive response opaquely in Cache Storage.
