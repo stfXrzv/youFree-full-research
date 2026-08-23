@@ -1,4 +1,4 @@
-# VibeStream Browser Transfer Lab
+# freePlay Browser Transfer Lab
 
 Local URL: `http://localhost/aaa/vibestream-browser-resolver/transfer-lab/`
 
@@ -48,3 +48,4 @@ A universal real-file export requires at least one relaxed constraint: a media r
 - `artifacts/sabr-cors-probe.json`
 - `artifacts/background-fetch-probe.json`
 - `artifacts/opaque-download-probe.json`
+
