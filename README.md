@@ -1,4 +1,4 @@
-# VibeStream Browser Resolver
+# freePlay Browser Resolver
 
 Private implementation and evidence repository for the browser-only resolver experiment.
 
@@ -50,3 +50,4 @@ At the end of every task:
 - Codex writes `STATUS_CODEX.md` and `to_work/`.
 - ChatGPT Work writes `STATUS_WORK.md` and `to_codex/`.
 - `PLAN_FINAL_V1.md` is canonical and changes only with an explicit recorded decision.
+
