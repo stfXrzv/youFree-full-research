@@ -38,7 +38,7 @@ async function probe(label, { queryRange = null, headerRange = null, title = fal
   url.searchParams.delete("range");
   url.searchParams.delete("title");
   if (queryRange !== null) url.searchParams.set("range", queryRange);
-  if (title) url.searchParams.set("title", "VibeStream Native Test");
+  if (title) url.searchParams.set("title", "freePlay Native Test");
   const headers = {};
   if (headerRange !== null) headers.Range = "bytes=" + headerRange;
   const response = await fetch(url, { headers, redirect: "manual" });
@@ -88,3 +88,4 @@ const report = {
 await mkdir(ARTIFACTS, { recursive: true });
 await writeFile(path.join(ARTIFACTS, "progressive-probe.json"), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
+
