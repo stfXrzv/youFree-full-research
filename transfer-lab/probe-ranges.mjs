@@ -105,7 +105,7 @@ for (const format of targets) {
   tests.push(await probe("header-1k", format.url, { headerRange: "0-1023" }));
   tests.push(await probe("base-no-range", format.url));
   tests.push(await probe("query-open", format.url, { queryRange: "0-" }));
-  tests.push(await probe("query-open-title", format.url, { queryRange: "0-", extra: { title: "VibeStream Adaptive Test" } }));
+  tests.push(await probe("query-open-title", format.url, { queryRange: "0-", extra: { title: "freePlay Adaptive Test" } }));
   for (const size of sizes) {
     tests.push(await probe("query-" + size, format.url, { queryRange: "0-" + (size - 1) }));
   }
@@ -130,3 +130,4 @@ for (const format of targets) {
 await mkdir(ARTIFACTS, { recursive: true });
 await writeFile(path.join(ARTIFACTS, "range-probe.json"), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));
+
