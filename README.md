@@ -55,7 +55,7 @@ Lab harness: `https://code2it.com/yftlab/` (dedicated proxy SW scope).
 | 1080p | when offered | working avc1 + av01 |
 | 1440p | not offered | working |
 | 2160p60 | not offered | working, stable |
-| 4320p60 HDR | not offered | working ~15min (iOS decoder RAM ceiling) |
+| 4320p60 HDR | not offered | working (long-run hits iOS decoder RAM) |
 | seek mid-clip | partial | instant, bidirectional |
 | survives backgrounding | working | working (iOS pauses hidden decoders) |
 
