@@ -2,7 +2,7 @@
 
 Status: resolved / not possible under the strict constraints
 Date: 2026-07-18 Europe/London
-Repository: `stfXrzv/vibestream-browser-resolver`
+Repository: `stfXrzv/youFree-browser-resolver`
 
 ## User requirement that was tested
 

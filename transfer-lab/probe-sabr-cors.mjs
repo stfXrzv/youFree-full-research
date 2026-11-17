@@ -5,7 +5,7 @@ import path from "node:path";
 const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(?:([A-Za-z]):)/, "$1:"));
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
-const PAGE_URL = "http://localhost/aaa/vibestream-browser-resolver/transfer-lab/";
+const PAGE_URL = "http://localhost/aaa/youFree-browser-resolver/transfer-lab/";
 const INPUT_URL = process.env.VBS_TEST_URL || "https://www.youtube.com/watch?v=MryMoDHHf7c";
 const VIDEO_ID = INPUT_URL.match(/[?&]v=([A-Za-z0-9_-]{11})/)?.[1] || INPUT_URL.match(/([A-Za-z0-9_-]{11})/)?.[1] || INPUT_URL;
 const CHROME_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138.0.0.0 Safari/537.36";

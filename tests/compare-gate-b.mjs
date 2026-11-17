@@ -51,7 +51,7 @@ comparisons.itags = {
 };
 
 const report = {
-  schema: "vibestream-gate-b-compare-v1",
+  schema: "youFree-gate-b-compare-v1",
   recordedAt: new Date().toISOString(),
   videoId,
   comparisons,

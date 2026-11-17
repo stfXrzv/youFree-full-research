@@ -1,6 +1,6 @@
-# freePlay Browser Transfer Lab
+# youFree Browser Transfer Lab
 
-Local URL: `http://localhost/aaa/vibestream-browser-resolver/transfer-lab/`
+Local URL: `http://localhost/aaa/youFree-browser-resolver/transfer-lab/`
 
 ## Confirmed working
 

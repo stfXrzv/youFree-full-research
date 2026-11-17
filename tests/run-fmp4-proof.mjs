@@ -52,7 +52,7 @@ const media = JSON.parse(probe.stdout);
 const streams = media.streams || [];
 const muxedStat = await stat(muxedPath);
 const report = {
-  schema: "vibestream-fmp4-mux-proof-v1",
+  schema: "youFree-fmp4-mux-proof-v1",
   recordedAt: new Date().toISOString(),
   input: { videoBytes: videoBlob.size, audioBytes: audioBlob.size },
   output: {

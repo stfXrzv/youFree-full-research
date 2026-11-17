@@ -6,7 +6,7 @@ import path from "node:path";
 const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(?:([A-Za-z]):)/, "$1:"));
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
-const PAGE_URL = "http://localhost/aaa/vibestream-browser-resolver/transfer-lab/";
+const PAGE_URL = "http://localhost/aaa/youFree-browser-resolver/transfer-lab/";
 const VIDEO_URL = process.env.VBS_TEST_URL || "https://www.youtube.com/watch?v=MryMoDHHf7c";
 
 function inspectHeaders(url, redirectCount = 0) {
@@ -78,20 +78,20 @@ try {
   const cleanTitle = resolved.title.replace(/[\\/:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim();
   const candidates = [
     ["base-no-title", "", {}],
-    ["title-short", "freePlay Test", {}],
+    ["title-short", "youFree Test", {}],
     ["title-48", cleanTitle.slice(0, 48).trim(), {}],
     ["title-64", cleanTitle.slice(0, 64).trim(), {}],
     ["title-80", cleanTitle.slice(0, 80).trim(), {}],
     ["title-full", cleanTitle, {}],
-    ["title-cnr", "freePlay Test", { cnr: "14" }],
-    ["title-xtags", "freePlay Test", { xtags: "heaudio=true" }],
-    ["title-cnr-xtags", "freePlay Test", { cnr: "14", xtags: "heaudio=true" }],
-    ["title-player-tail", "freePlay Test", { alr: "yes", cpn: "VBSCLIENTTEST1", rn: "1", rbuf: "0" }],
-    ["title-download", "freePlay Test", { download: "1" }],
-    ["title-response-disposition", "freePlay Test", { "response-content-disposition": "attachment; filename=freePlay.mp4" }],
-    ["title-content-disposition", "freePlay Test", { "content-disposition": "attachment" }],
-    ["title-redirector", "freePlay Test", { $host: "redirector.googlevideo.com" }],
-    ["title-youtube-host", "freePlay Test", { $host: "www.youtube.com" }]
+    ["title-cnr", "youFree Test", { cnr: "14" }],
+    ["title-xtags", "youFree Test", { xtags: "heaudio=true" }],
+    ["title-cnr-xtags", "youFree Test", { cnr: "14", xtags: "heaudio=true" }],
+    ["title-player-tail", "youFree Test", { alr: "yes", cpn: "VBSCLIENTTEST1", rn: "1", rbuf: "0" }],
+    ["title-download", "youFree Test", { download: "1" }],
+    ["title-response-disposition", "youFree Test", { "response-content-disposition": "attachment; filename=youFree.mp4" }],
+    ["title-content-disposition", "youFree Test", { "content-disposition": "attachment" }],
+    ["title-redirector", "youFree Test", { $host: "redirector.googlevideo.com" }],
+    ["title-youtube-host", "youFree Test", { $host: "www.youtube.com" }]
   ];
 
   for (const [name, candidateTitle, additions] of candidates) {

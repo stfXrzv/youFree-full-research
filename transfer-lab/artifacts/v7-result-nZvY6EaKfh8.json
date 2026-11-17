@@ -8,7 +8,7 @@
     "noMediaRelay": true
   },
   "console": [
-    "[VBS-V7] service-worker-ready {ok: true, strictOffline: false, cache: vibestream-query-range-v7-media}",
+    "[VBS-V7] service-worker-ready {ok: true, strictOffline: false, cache: youFree-query-range-v7-media}",
     "[VBS-V7] resolve-start {videoId: nZvY6EaKfh8}",
     "[VBS-V7] resolver-client {client: IOS, status: 200, playability: OK, formats: 27, reason: }",
     "[VBS-V7] resolver-client {client: ANDROID, status: 200, playability: OK, formats: 1, reason: }",
@@ -140,7 +140,7 @@
   "checks": {
     "boot": {
       "pass": true,
-      "title": "VibeStream Browser Transfer Lab"
+      "title": "youFree Browser Transfer Lab"
     },
     "resolveUnder100Mb": {
       "pass": true,

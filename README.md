@@ -1,4 +1,4 @@
-# freePlay Browser Resolver
+# youFree Browser Resolver
 
 Private implementation and evidence repository for the browser-only resolver experiment.
 
@@ -12,8 +12,8 @@ This repository is the shared source of truth for Codex and ChatGPT Work. It int
 
 Local entry points:
 
-- `http://localhost/aaa/vibestream-browser-resolver/lab/`
-- `http://localhost/aaa/vibestream-browser-resolver/transfer-lab/`
+- `http://localhost/aaa/youFree-browser-resolver/lab/`
+- `http://localhost/aaa/youFree-browser-resolver/transfer-lab/`
 
 Useful commands:
 

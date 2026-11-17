@@ -6,7 +6,7 @@ const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(?:([A-Z
 const PROFILE = path.join(ROOT, ".chrome-profile");
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
-const TEST_URL = "http://localhost/aaa/vibestream-browser-resolver/transfer-lab/";
+const TEST_URL = "http://localhost/aaa/youFree-browser-resolver/transfer-lab/";
 const INPUT_URL = process.env.VBS_TEST_URL || "https://www.youtube.com/watch?v=A9-t86OAtM0";
 const TEST_DIRECT = process.env.VBS_TEST_DIRECT !== "0";
 const VIDEO_SLUG = (INPUT_URL.match(/[?&]v=([A-Za-z0-9_-]{11})/)?.[1] || INPUT_URL.match(/([A-Za-z0-9_-]{11})/)?.[1] || "unknown").replace(/[^A-Za-z0-9_-]/g, "");
@@ -151,7 +151,7 @@ try {
   await page.waitForFunction(() => ["cached", "cache-error"].includes(window.__vbsV7?.phase), null, { timeout: 180000 });
   const cached = await page.evaluate(async () => {
     const state = window.__vbsV7;
-    const cache = await caches.open("vibestream-query-range-v7-media");
+    const cache = await caches.open("youFree-query-range-v7-media");
     const keys = await cache.keys();
     return {
       phase: state.phase,

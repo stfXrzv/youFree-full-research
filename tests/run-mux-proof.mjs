@@ -6,7 +6,7 @@ import { chromium } from "playwright";
 const chrome = process.env.CHROME_PATH
   || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const target = process.env.LAB_URL
-  || "http://localhost/aaa/vibestream-browser-resolver/lab/";
+  || "http://localhost/aaa/youFree-browser-resolver/lab/";
 const outputDir = resolve("artifacts/mux-proof");
 const fixture = resolve("tests/fixtures/sample.mp4");
 const videoPath = resolve(outputDir, "video.mp4");
@@ -49,10 +49,10 @@ try {
     const videoBlob = await videoResponse.blob();
     const audioBlob = await audioResponse.blob();
     const muxedBlob = await module.ytmuxMuxAuto(videoBlob, audioBlob);
-    window.__vibestreamMuxProof = muxedBlob;
+    window.__youFreeMuxProof = muxedBlob;
 
     const database = await new Promise((resolveDb, rejectDb) => {
-      const request = indexedDB.open("vibestream-mux-proof", 1);
+      const request = indexedDB.open("youFree-mux-proof", 1);
       request.onupgradeneeded = () => request.result.createObjectStore("assets");
       request.onsuccess = () => resolveDb(request.result);
       request.onerror = () => rejectDb(request.error);
@@ -127,7 +127,7 @@ try {
     page.waitForEvent("download", { timeout: 15_000 }),
     page.evaluate(() => {
       const link = document.createElement("a");
-      link.href = URL.createObjectURL(window.__vibestreamMuxProof);
+      link.href = URL.createObjectURL(window.__youFreeMuxProof);
       link.download = "muxed.mp4";
       link.click();
     }),
@@ -150,7 +150,7 @@ const streams = media.streams || [];
 const signature = (await readFile(muxedPath)).subarray(0, 32).toString("hex");
 const muxedStat = await stat(muxedPath);
 const report = {
-  schema: "vibestream-mux-proof-v1",
+  schema: "youFree-mux-proof-v1",
   recordedAt: new Date().toISOString(),
   runtime: "Chrome browser Blob mux",
   browserResult,

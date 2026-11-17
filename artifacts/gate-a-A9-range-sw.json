@@ -1,6 +1,6 @@
 {
-  "schema": "vibestream-gate-a-playwright-v1",
-  "target": "http://localhost/aaa/vibestream-browser-resolver/lab/",
+  "schema": "youFree-gate-a-playwright-v1",
+  "target": "http://localhost/aaa/youFree-browser-resolver/lab/",
   "video": "A9-t86OAtM0",
   "useRangeServiceWorker": true,
   "result": {

@@ -5,7 +5,7 @@ import { CLIENT_PROFILES, PLAYER_ENDPOINT, safeUrlShape } from "../lab/core.mjs"
 import { resolveWithValidation } from "../lab/resilient-resolve.mjs";
 
 const target = process.env.LAB_URL
-  || "http://localhost/aaa/vibestream-browser-resolver/lab/";
+  || "http://localhost/aaa/youFree-browser-resolver/lab/";
 const videoId = process.env.VIDEO_ID || "A9-t86OAtM0";
 const output = process.env.RESULT_PATH || "artifacts/gate-c-result.json";
 const chrome = process.env.CHROME_PATH
@@ -165,7 +165,7 @@ try {
   });
 
   const report = {
-    schema: "vibestream-gate-c-v1",
+    schema: "youFree-gate-c-v1",
     recordedAt: new Date().toISOString(),
     target,
     videoId,

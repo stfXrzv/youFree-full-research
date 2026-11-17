@@ -2,7 +2,7 @@
 
 Date: 2026-07-18 Europe/London
 
-The freePlay browser resolver milestone is closed as:
+The youFree browser resolver milestone is closed as:
 
 `resolved / not possible under the strict browser-only constraints`
 

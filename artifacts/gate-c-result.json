@@ -1,7 +1,7 @@
 {
-  "schema": "vibestream-gate-c-v1",
+  "schema": "youFree-gate-c-v1",
   "recordedAt": "2026-07-16T18:34:36.975Z",
-  "target": "http://localhost/aaa/vibestream-browser-resolver/lab/",
+  "target": "http://localhost/aaa/youFree-browser-resolver/lab/",
   "videoId": "A9-t86OAtM0",
   "resolver": "browser-player-api",
   "mediaRelayUsed": false,

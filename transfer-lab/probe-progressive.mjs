@@ -38,7 +38,7 @@ async function probe(label, { queryRange = null, headerRange = null, title = fal
   url.searchParams.delete("range");
   url.searchParams.delete("title");
   if (queryRange !== null) url.searchParams.set("range", queryRange);
-  if (title) url.searchParams.set("title", "freePlay Native Test");
+  if (title) url.searchParams.set("title", "youFree Native Test");
   const headers = {};
   if (headerRange !== null) headers.Range = "bytes=" + headerRange;
   const response = await fetch(url, { headers, redirect: "manual" });

@@ -218,7 +218,7 @@ ui.clear.addEventListener("click", () => {
 
 ui.export.addEventListener("click", () => {
   const report = redactRecord({
-    schema: "vibestream-gate-a-report-v1",
+    schema: "youFree-gate-a-report-v1",
     videoId: state.videoId,
     startedAt: state.startedAt,
     finishedAt: state.finishedAt,
@@ -231,7 +231,7 @@ ui.export.addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(report, null, 2)], { type: "application/json" });
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = `vibestream-gate-a-${state.videoId || "report"}.json`;
+  link.download = `youFree-gate-a-${state.videoId || "report"}.json`;
   link.click();
   setTimeout(() => URL.revokeObjectURL(link.href), 1000);
 });

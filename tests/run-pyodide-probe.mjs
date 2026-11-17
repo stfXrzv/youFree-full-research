@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
 const target = process.env.LAB_URL
-  || "http://localhost/aaa/vibestream-browser-resolver/lab/";
+  || "http://localhost/aaa/youFree-browser-resolver/lab/";
 const chrome = process.env.CHROME_PATH
   || "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const action = process.env.PYODIDE_ACTION || "yt_dlp_extract";

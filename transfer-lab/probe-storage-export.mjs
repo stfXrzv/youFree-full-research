@@ -5,7 +5,7 @@ import path from "node:path";
 const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(?:([A-Za-z]):)/, "$1:"));
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
-const PAGE_URL = "http://localhost/aaa/vibestream-browser-resolver/transfer-lab/";
+const PAGE_URL = "http://localhost/aaa/youFree-browser-resolver/transfer-lab/";
 const INPUT_URL = process.env.VBS_TEST_URL || "https://www.youtube.com/watch?v=MryMoDHHf7c";
 
 await mkdir(ARTIFACTS, { recursive: true });
@@ -22,7 +22,7 @@ await page.waitForFunction(() => window.__vbsV7?.phase === "cached", null, { tim
 const result = await page.evaluate(async () => {
   const registration = await navigator.serviceWorker.ready;
   const manifest = window.__vbsV7.manifest;
-  const cache = await caches.open("vibestream-query-range-v7-media");
+  const cache = await caches.open("youFree-query-range-v7-media");
   const response = await cache.match(manifest.video.url, { ignoreVary: true });
   const cloneForBlob = response.clone();
   const cloneForBuffer = response.clone();

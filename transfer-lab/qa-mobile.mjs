@@ -5,7 +5,7 @@ import path from "node:path";
 const ROOT = path.dirname(new URL(import.meta.url).pathname.replace(/^\/(?:([A-Za-z]):)/, "$1:"));
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe";
-const PAGE_URL = "http://localhost/aaa/vibestream-browser-resolver/transfer-lab/";
+const PAGE_URL = "http://localhost/aaa/youFree-browser-resolver/transfer-lab/";
 
 await mkdir(ARTIFACTS, { recursive: true });
 const browser = await chromium.launch({ headless: true, executablePath: CHROME });

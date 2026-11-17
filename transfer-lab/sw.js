@@ -1,7 +1,7 @@
 "use strict";
 
-const MEDIA_CACHE = "vibestream-query-range-v7-media";
-const DOWNLOAD_TARGET_CACHE = "vibestream-query-range-v7-download-targets";
+const MEDIA_CACHE = "youFree-query-range-v7-media";
+const DOWNLOAD_TARGET_CACHE = "youFree-query-range-v7-download-targets";
 let strictOffline = false;
 
 self.addEventListener("install", event => {

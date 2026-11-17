@@ -11,7 +11,7 @@
 Run through HTTP, for example:
 
 ```text
-http://localhost/aaa/vibestream-browser-resolver/lab/
+http://localhost/aaa/youFree-browser-resolver/lab/
 ```
 
 Use **Export redacted JSON** to capture reproducible evidence, then append only the measured verdict to `AI_BRIDGE/TEST_RESULTS.jsonl`.

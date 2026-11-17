@@ -3,7 +3,7 @@ import { dirname, resolve } from "node:path";
 import { chromium } from "playwright";
 
 const target = process.env.LAB_URL
-  || "http://localhost/aaa/vibestream-browser-resolver/lab/";
+  || "http://localhost/aaa/youFree-browser-resolver/lab/";
 const video = process.env.VIDEO_ID || "A9-t86OAtM0";
 const output = process.env.RESULT_PATH || "";
 const useRangeServiceWorker = process.env.RANGE_SW === "1";
@@ -222,7 +222,7 @@ try {
   }
 
   const report = {
-    schema: "vibestream-gate-a-playwright-v1",
+    schema: "youFree-gate-a-playwright-v1",
     target,
     video,
     useRangeServiceWorker,
